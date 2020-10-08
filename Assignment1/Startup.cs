@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Assignment1.Data;
+using FileData;
 using Microsoft.AspNetCore.Components.Authorization;
 
 namespace Assignment1
@@ -33,6 +34,7 @@ namespace Assignment1
             services.AddSingleton<WeatherForecastService>();
             services.AddScoped<IUserData, UserData>();
             services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
+            services.AddSingleton<IAdultService, AdultService>();
 
             services.AddAuthorization(options =>
             {
