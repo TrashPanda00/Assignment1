@@ -1,0 +1,64 @@
+﻿@page "/login"
+@using Assignment1.Auth
+@namespace LoginComponent
+
+@inject AuthenticationStateProvider AuthenticationStateProvider;
+@inject NavigationManager NavigationManager;
+
+<h1 xmlns="http://www.w3.org/1999/html">Welcome back!</h1>
+<AuthorizeView>
+    <NotAuthorized>
+        <form>
+            <a>Username:</a>
+            <input type="text" @bind-value="Username"/>
+            <br/>
+            <a>Password:</a>
+            <input type="password" @bind-value="Password"/>
+            <br/>
+            <button @onclick="PerformLogIn">Log in</button>
+            <br/>
+            <p style="color: red">@ErrorMessage</p>
+        </form>
+    </NotAuthorized>
+    <Authorized>
+        <button @onclick="PerformLogOut">Log out</button>
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    private string Username;
+    private string Password;
+    private string ErrorMessage;
+
+    public async Task PerformLogIn()
+    {
+        ErrorMessage = "";
+        try
+        {
+            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(Username, Password);
+            Username = "";
+            Password = "";
+            NavigationManager.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+            ErrorMessage = e.Message;
+        }
+    }
+
+    public async Task PerformLogOut()
+    {
+        ErrorMessage = "";
+        Username = "";
+        Password = "";
+        try
+        {
+            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).Logout();
+            NavigationManager.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+        }
+    }
+
+}
