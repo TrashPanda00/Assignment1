@@ -3,7 +3,7 @@
 @using Models
 @attribute [Authorize(Policy="MustBeLoggedIn")]
 
-@inject AdultService AdultService;
+@inject IAdultService AdultService;
 
 <h1>You're logged in and can add an adult!</h1>
 <form>
@@ -48,7 +48,7 @@
     private string sex;
     private string job;
 
-    public void Add(string firstName,string lastName,string hair,string eyes,int age,int height,int weight,string sex,string job)
+    public void Add()
     {
         Adult adultToAdd = new Adult()
         {

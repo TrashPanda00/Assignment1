@@ -1,0 +1,58 @@
+﻿@page "/view"
+
+@using Assignment1.Data
+@inject IAdultService AdultService
+@using Models
+
+<h1>Table of adults</h1>
+
+@if (adults == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Hair</th>
+            <th>Eyes</th>
+            <th>Age</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>Sex</th>
+            <th>Job</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var adult in adults)
+        {
+            <tr>
+                <td>@adult.FirstName</td>
+                <td>@adult.LastName</td>
+                <td>@adult.HairColor</td>
+                <td>@adult.EyeColor</td>
+                <td>@adult.Age</td>
+                <td>@adult.Height</td>
+                <td>@adult.Weight</td>
+                <td>@adult.Sex</td>
+                <td>@adult.JobTitle</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IList<Adult> adults;
+
+    protected override async Task OnInitializedAsync()
+    {
+        adults = await AdultService.getAdult();
+    }
+
+}

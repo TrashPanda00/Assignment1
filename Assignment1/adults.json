@@ -1,0 +1,14 @@
+[
+  {
+    "JobTitle": "Something",
+    "Id": 0,
+    "FirstName": "Bogdan",
+    "LastName": "Mezei",
+    "HairColor": "Brown",
+    "EyeColor": "Brown",
+    "Age": 20,
+    "Weight": 75,
+    "Height": 180,
+    "Sex": "Male"
+  }
+]

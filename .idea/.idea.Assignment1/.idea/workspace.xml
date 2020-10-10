@@ -8,21 +8,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="864bd38f-554e-4c37-b95a-20e5a31b2f3c" name="Default Changelist" comment="First version">
-      <change afterPath="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment1/Data/FileContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment1/Data/IAdultService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment1/Model/Adult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment1/Model/Child.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment1/Model/ChildInterest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment1/Model/Family.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment1/Model/Interest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment1/Model/Person.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment1/Model/Pet.cs" afterDir="false" />
+    <list default="true" id="864bd38f-554e-4c37-b95a-20e5a31b2f3c" name="Default Changelist" comment="Unfinished">
+      <change afterPath="$PROJECT_DIR$/Assignment1/Pages/ViewAdults.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Data/IAdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Data/IAdultService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment1/Pages/AddAdult.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/AddAdult.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Shared/NavMenu.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,14 +38,15 @@
         <option value="$PROJECT_DIR$/Assignment1/Model/User.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Data/IUserData.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Pages/Add Adult.razor" />
-        <option value="$PROJECT_DIR$/Assignment1/Shared/NavMenu.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Auth/CustomAuthenticationStateProvider.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Auth/UserData.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Pages/LogIn.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Shared/MainLayout.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Data/IAdultService.cs" />
+        <option value="$PROJECT_DIR$/Assignment1/Pages/ViewAdults.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Startup.cs" />
+        <option value="$PROJECT_DIR$/Assignment1/Shared/NavMenu.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Pages/AddAdult.razor" />
       </list>
     </option>
@@ -115,7 +109,16 @@
       <updated>1602139296773</updated>
       <workItem from="1602139300422" duration="10217000" />
       <workItem from="1602149811457" duration="681000" />
+      <workItem from="1602346939386" duration="3436000" />
     </task>
+    <task id="LOCAL-00001" summary="Unfinished">
+      <created>1602191506173</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602191506173</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,24 +140,30 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Unfinished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unfinished" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="122" key="GridCell.Tab.0.bottom" timestamp="1602169103056">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="2517" height="164" key="GridCell.Tab.0.bottom" timestamp="1602349767590">
+      <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1602169103056" />
-    <state width="1493" height="122" key="GridCell.Tab.0.center" timestamp="1602169103056">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1493" height="122" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
+    <state width="2517" height="164" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
+    <state width="2517" height="164" key="GridCell.Tab.0.center" timestamp="1602349767590">
+      <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1602169103056" />
-    <state width="1493" height="122" key="GridCell.Tab.0.left" timestamp="1602169103056">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1493" height="122" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
+    <state width="2517" height="164" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
+    <state width="2517" height="164" key="GridCell.Tab.0.left" timestamp="1602349767590">
+      <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1602169103056" />
-    <state width="1493" height="122" key="GridCell.Tab.0.right" timestamp="1602169103056">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="1493" height="122" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
+    <state width="2517" height="164" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
+    <state width="2517" height="164" key="GridCell.Tab.0.right" timestamp="1602349767590">
+      <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1602169103056" />
+    <state width="1493" height="122" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
+    <state width="2517" height="164" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
     <state width="1493" height="246" key="GridCell.Tab.1.bottom" timestamp="1602149980834">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -231,10 +240,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1602167775192" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1602139328838">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1602191517952">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1602139328838" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1602191517952" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1602175417818">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using FileData;
 using Models;
 
@@ -13,9 +14,9 @@ namespace Assignment1.Data
             fileContext = new FileContext();
         }
 
-        public IList<Adult> getAdult()
+        public Task<IList<Adult>> getAdult()
         {
-            return fileContext.Adults;
+            return Task.FromResult(fileContext.Adults);
         }
 
         public void Add(Adult newAdult)

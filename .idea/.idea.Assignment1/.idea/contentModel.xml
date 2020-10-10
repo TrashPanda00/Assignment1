@@ -6,6 +6,7 @@
     <e p="C:\Users\bogda\RiderProjects\Assignment1" t="IncludeFlat">
       <e p="Assignment1" t="IncludeRecursive">
         <e p="_Imports.razor" t="Include" />
+        <e p="adults.json" t="Include" />
         <e p="App.razor" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
@@ -23,6 +24,7 @@
           <e p="WeatherForecast.cs" t="Include" />
           <e p="WeatherForecastService.cs" t="Include" />
         </e>
+        <e p="families.json" t="Include" />
         <e p="Model" t="Include">
           <e p="Adult.cs" t="Include" />
           <e p="Child.cs" t="Include" />
@@ -49,6 +51,7 @@
           <e p="FetchData.razor" t="Include" />
           <e p="Index.razor" t="Include" />
           <e p="LogIn.razor" t="Include" />
+          <e p="ViewAdults.razor" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
