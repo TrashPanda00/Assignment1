@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
@@ -42,6 +43,7 @@ public class ValidHairColor : ValidationAttribute {
     protected override ValidationResult IsValid(object value, ValidationContext validationContext) {
         List<string> valid = new[] {"blond", "red", "brown", "black",
             "white", "grey", "blue", "green", "leverpostej"}.ToList();
+        Console.WriteLine(value.ToString());
         if (valid == null || valid.Contains(value.ToString().ToLower())) {
             return ValidationResult.Success;
         }

@@ -10,5 +10,29 @@
     "Weight": 75,
     "Height": 180,
     "Sex": "Male"
+  },
+  {
+    "JobTitle": "ydfd",
+    "Id": 0,
+    "FirstName": "dasdsa",
+    "LastName": "dsadasd",
+    "HairColor": "45543",
+    "EyeColor": "rwrew",
+    "Age": 56,
+    "Weight": 65,
+    "Height": 65,
+    "Sex": "5"
+  },
+  {
+    "JobTitle": "dasd",
+    "Id": 0,
+    "FirstName": "Hi",
+    "LastName": "Works",
+    "HairColor": "red",
+    "EyeColor": "blue",
+    "Age": 30,
+    "Weight": 100,
+    "Height": 55,
+    "Sex": "dsadsa"
   }
 ]

@@ -1,68 +1,50 @@
 ﻿@page "/adult"
 @using Assignment1.Data
 @using Models
-@attribute [Authorize(Policy="MustBeLoggedIn")]
+@attribute [Authorize(Policy = "MustBeLoggedIn")]
 
 @inject IAdultService AdultService;
 
 <h1>You're logged in and can add an adult!</h1>
-<form>
+<EditForm Model="@adultToAdd" OnValidSubmit="Add">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
     <a>First Name:</a>
-    <input type="text" @bind-value="firstName"/>
-    <br />
+    <input type="text" @bind-value="adultToAdd.FirstName"/>
+    <br/>
     <a>Last Name:</a>
-    <input type="text" @bind-value="lastName"/>
-    <br />
+    <input type="text" @bind-value="adultToAdd.LastName"/>
+    <br/>
     <a>Hair Color:</a>
-    <input type="text"@bind-value="hair"/>
-    <br />
+    <input type="text"@bind-value="adultToAdd.HairColor"/>
+    <br/>
     <a>Eye Color:</a>
-    <input type="text" @bind-value="eyes"/>
-    <br />
+    <input type="text" @bind-value="adultToAdd.EyeColor"/>
+    <br/>
     <a>Age:</a>
-    <input type="text" @bind-value="age"/>
-    <br />
+    <input type="text" @bind-value="adultToAdd.Age"/>
+    <br/>
     <a>Height:</a>
-    <input type="text" @bind-value="height"/>
-    <br />
+    <input type="text" @bind-value="adultToAdd.Height"/>
+    <br/>
     <a>Weight:</a>
-    <input type="text" @bind-value="weight"/>
-    <br />
+    <input type="text" @bind-value="adultToAdd.Weight"/>
+    <br/>
     <a>Sex:</a>
-    <input type="text" @bind-value="sex"/>
-    <br />
+    <input type="text" @bind-value="adultToAdd.Sex"/>
+    <br/>
     <a>Job:</a>
-    <input type="text" @bind-value="job"/>
-    <br />
-    <button @onclick="Add">Add Adult</button>
-</form>
+    <input type="text" @bind-value="adultToAdd.JobTitle"/>
+    <br/>
+    <input type="submit" class="btn btn-primary" value="Add Adult" />
+</EditForm>
 
 @code {
-    private string firstName; 
-    private string lastName;
-    private string hair;
-    private string eyes;
-    private int age;
-    private int height;
-    private int weight;
-    private string sex;
-    private string job;
+    Adult adultToAdd = new Adult();
 
     public void Add()
     {
-        Adult adultToAdd = new Adult()
-        {
-            FirstName = firstName,
-            LastName = lastName,
-            HairColor = hair,
-            EyeColor = eyes,
-            Age = age,
-            Height = height,
-            Weight = weight,
-            Sex = sex,
-            JobTitle = job
-
-        };
         AdultService.Add(adultToAdd);
     }
+
 }
