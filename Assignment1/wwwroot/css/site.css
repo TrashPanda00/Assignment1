@@ -188,4 +188,23 @@ app {
     .oi {
         float: right;
     }
+    
+    .radio-buttons {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 70vw;
+    }
+    
+    .couple {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+    
+    input[type="radio"] {
+        margin: 0 7px 0 7px;
+    }
+    
+    
 }

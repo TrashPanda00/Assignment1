@@ -8,13 +8,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="864bd38f-554e-4c37-b95a-20e5a31b2f3c" name="Default Changelist" comment="Added sorting">
+    <list default="true" id="864bd38f-554e-4c37-b95a-20e5a31b2f3c" name="Default Changelist" comment="Delete button and fixed sorting bugs">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Data/IAdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Data/IAdultService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/AddAdult.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/AddAdult.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment1/Pages/ViewAdults.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/ViewAdults.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment1/adults.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/adults.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,12 +43,12 @@
         <option value="$PROJECT_DIR$/Assignment1/Shared/NavMenu.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Startup.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Model/Person.cs" />
-        <option value="$PROJECT_DIR$/Assignment1/wwwroot/css/site.css" />
         <option value="$PROJECT_DIR$/Assignment1/Pages/AddAdult.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Data/IAdultService.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" />
         <option value="$PROJECT_DIR$/Assignment1/adults.json" />
         <option value="$PROJECT_DIR$/Assignment1/Pages/ViewAdults.razor" />
+        <option value="$PROJECT_DIR$/Assignment1/wwwroot/css/site.css" />
       </list>
     </option>
   </component>
@@ -112,7 +110,7 @@
       <updated>1602139296773</updated>
       <workItem from="1602139300422" duration="10217000" />
       <workItem from="1602149811457" duration="681000" />
-      <workItem from="1602346939386" duration="20600000" />
+      <workItem from="1602346939386" duration="25527000" />
     </task>
     <task id="LOCAL-00001" summary="Unfinished">
       <created>1602191506173</created>
@@ -149,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602434208885</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Delete button and fixed sorting bugs">
+      <created>1602443810023</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602443810023</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +181,8 @@
     <MESSAGE value="Added Validation" />
     <MESSAGE value="Basic Search Added" />
     <MESSAGE value="Added sorting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added sorting" />
+    <MESSAGE value="Delete button and fixed sorting bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete button and fixed sorting bugs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="960" y="275" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602434233696">
@@ -187,28 +193,28 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="0" y="23" key="DiffContextDialog/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602424900140" />
-    <state width="2517" height="164" key="GridCell.Tab.0.bottom" timestamp="1602443061510">
+    <state width="2517" height="164" key="GridCell.Tab.0.bottom" timestamp="1602449362727">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="164" key="GridCell.Tab.0.bottom/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602443061510" />
+    <state width="2517" height="164" key="GridCell.Tab.0.bottom/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602449362727" />
     <state width="1493" height="122" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
-    <state width="2517" height="164" key="GridCell.Tab.0.center" timestamp="1602443061509">
+    <state width="2517" height="164" key="GridCell.Tab.0.center" timestamp="1602449362727">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="164" key="GridCell.Tab.0.center/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602443061509" />
+    <state width="2517" height="164" key="GridCell.Tab.0.center/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602449362727" />
     <state width="1493" height="122" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
-    <state width="2517" height="164" key="GridCell.Tab.0.left" timestamp="1602443061509">
+    <state width="2517" height="164" key="GridCell.Tab.0.left" timestamp="1602449362727">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="164" key="GridCell.Tab.0.left/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602443061509" />
+    <state width="2517" height="164" key="GridCell.Tab.0.left/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602449362727" />
     <state width="1493" height="122" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
-    <state width="2517" height="164" key="GridCell.Tab.0.right" timestamp="1602443061509">
+    <state width="2517" height="164" key="GridCell.Tab.0.right" timestamp="1602449362727">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="164" key="GridCell.Tab.0.right/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602443061509" />
+    <state width="2517" height="164" key="GridCell.Tab.0.right/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602449362727" />
     <state width="1493" height="122" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
     <state width="1493" height="246" key="GridCell.Tab.1.bottom" timestamp="1602149980834">
@@ -287,10 +293,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1602167775192" />
-    <state x="602" y="206" key="Vcs.Push.Dialog.v2" timestamp="1602434216643">
+    <state x="602" y="206" key="Vcs.Push.Dialog.v2" timestamp="1602443817685">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="602" y="206" key="Vcs.Push.Dialog.v2/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602434216643" />
+    <state x="602" y="206" key="Vcs.Push.Dialog.v2/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602443817685" />
     <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1602191517952" />
     <state x="602" y="206" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1602350779472" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1602175417818">

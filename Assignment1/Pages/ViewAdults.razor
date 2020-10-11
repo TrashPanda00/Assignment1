@@ -3,9 +3,10 @@
 @using Assignment1.Data
 @inject IAdultService AdultService
 @using Models
-
-<h1>Table of adults</h1>
-
+<div>
+    <h1>Table of adults</h1>
+    <h6>Here you can view a detailed table of all adults. You can click on any column in order to sort the table either ascending or descending. </h6>
+</div>
 @if (adults == null)
 {
     <p>
@@ -14,83 +15,129 @@
 }
 else
 {
-    <input type="text" @bind-value="searchTerm" @bind-value:event="oninput"/>
-    <br/>
-    <br/>
-    <table class="table table-bordered table-hover">
-        <thead>
-        <tr>
-            <th class="sort-th" @onclick="@(() => SortTable("Id"))">
-                            ID
-                            <span class="oi @(SetSortIcon("Id"))"></span>
-                        </th>
-            <th class="sort-th" @onclick="@(() => SortTable("FirstName"))">
-                First Name
-                <span class="oi @(SetSortIcon("FirstName"))"></span>
-            </th>
-            <th class="sort-th" @onclick="@(() => SortTable("LastName"))">
-                Last Name
-                <span class="oi @(SetSortIcon("LastName"))"></span>
-            </th>
-            <th class="sort-th" @onclick="@(() => SortTable("HairColor"))">
-                Hair
-                <span class="oi @(SetSortIcon("HairColor"))"></span>
-            </th>
-            <th class="sort-th" @onclick="@(() => SortTable("EyeColor"))">
-                Eyes
-                <span class="oi @(SetSortIcon("EyeColor"))"></span>
-            </th>
-            <th class="sort-th" @onclick="@(() => SortTable("Age"))">
-                Age
-                <span class="oi @(SetSortIcon("Age"))"></span>
-            </th>
-            <th class="sort-th" @onclick="@(() => SortTable("Height"))">
-                Height
-                <span class="oi @(SetSortIcon("Height"))"></span>
-            </th>
-            <th class="sort-th" @onclick="@(() => SortTable("Weight"))">
-                Weight
-                <span class="oi @(SetSortIcon("Weight"))"></span>
-            </th>
-            <th class="sort-th" @onclick="@(() => SortTable("Sex"))">
-                Sex
-                <span class="oi @(SetSortIcon("Sex"))"></span>
-            </th>
-            <th class="sort-th" @onclick="@(() => SortTable("JobTitle"))">
-                Job
-                <span class="oi @(SetSortIcon("JobTitle"))"></span>
-            </th>
-            <th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var adult in filteredAdults)
-        {
+    <div>
+        <input type="text" @bind-value="searchTerm" @bind-value:event="oninput" placeholder="Search here..." class="mb-2"/>
+        <b>Search by:</b>
+        <div class="radio-buttons">
+            <div class="couple">
+                <input type="radio" id="ID" name="search" value="Id">
+                <label for="ID">ID</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="firstname" name="search" value="FirstName">
+                <label for="firstname">First Name</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="lastname" name="search" value="LastName">
+                <label for="lastname">Last Name</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="hair" name="search" value="HairColor">
+                <label for="hair">Hair Color</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="eyes" name="search" value="EyeColor">
+                <label for="eyes">Eye Color</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="age" name="search" value="Age">
+                <label for="age">Age</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="height" name="search" value="Height">
+                <label for="height">Height</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="weight" name="search" value="Weight">
+                <label for="weigth">Weight</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="sex" name="search" value="Sex">
+                <label for="sex">Gender</label>
+            </div>
+            <div class="couple">
+                <input type="radio" id="job" name="search" value="JobTitle">
+                <label for="job">Job Title</label>
+            </div>
+        </div>
+
+    </div>
+    <div class="mt-4">
+        <table class="table table-bordered table-hover">
+            <thead>
             <tr>
-                <td>@adult.Id</td>
-                <td>@adult.FirstName</td>
-                <td>@adult.LastName</td>
-                <td>@adult.HairColor</td>
-                <td>@adult.EyeColor</td>
-                <td>@adult.Age</td>
-                <td>@adult.Height</td>
-                <td>@adult.Weight</td>
-                <td>@adult.Sex</td>
-                <td>@adult.JobTitle</td>
-                <td>
-                    <span class="btn btn-danger" @onclick="() => Remove(adult)">Delete</span>
-                </td>
+                <th class="sort-th" @onclick="@(() => SortTable("Id"))">
+                    ID
+                    <span class="oi @(SetSortIcon("Id"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("FirstName"))">
+                    First Name
+                    <span class="oi @(SetSortIcon("FirstName"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("LastName"))">
+                    Last Name
+                    <span class="oi @(SetSortIcon("LastName"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("HairColor"))">
+                    Hair Color
+                    <span class="oi @(SetSortIcon("HairColor"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("EyeColor"))">
+                    Eye Color
+                    <span class="oi @(SetSortIcon("EyeColor"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("Age"))">
+                    Age
+                    <span class="oi @(SetSortIcon("Age"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("Height"))">
+                    Height
+                    <span class="oi @(SetSortIcon("Height"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("Weight"))">
+                    Weight
+                    <span class="oi @(SetSortIcon("Weight"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("Sex"))">
+                    Gender
+                    <span class="oi @(SetSortIcon("Sex"))"></span>
+                </th>
+                <th class="sort-th" @onclick="@(() => SortTable("JobTitle"))">
+                    Job Title
+                    <span class="oi @(SetSortIcon("JobTitle"))"></span>
+                </th>
+                <th>Action</th>
             </tr>
-        }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            @foreach (var adult in filteredAdults)
+            {
+                <tr>
+                    <td>@adult.Id</td>
+                    <td>@adult.FirstName</td>
+                    <td>@adult.LastName</td>
+                    <td>@adult.HairColor</td>
+                    <td>@adult.EyeColor</td>
+                    <td>@adult.Age</td>
+                    <td>@adult.Height</td>
+                    <td>@adult.Weight</td>
+                    <td>@adult.Sex</td>
+                    <td>@adult.JobTitle</td>
+                    <td>
+                        <span class="btn btn-danger" @onclick="() => Remove(adult)">Delete</span>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
 }
 
 @code {
     private IList<Adult> adults;
     private string searchTerm = "";
-    private bool isSortedAscending;
-    private string activeSortColumn;
+    private bool isSortedAscending = true;
+    private string activeSortColumn = "Id";
     public IList<Adult> filteredAdults => adults.Where(i => i.FirstName.ToLower().StartsWith(searchTerm.ToLower())).ToList();
 
     protected override async Task OnInitializedAsync()
@@ -104,10 +151,9 @@ else
         adults.Remove(adultToRemove);
         StateHasChanged();
     }
-    
+
     private void SortTable(string columnName)
     {
-        Console.WriteLine(columnName);
         if (columnName != activeSortColumn)
         {
             adults = AdultService.getAdult().Result.OrderBy(x => x.GetType().GetProperty(columnName).GetValue(x, null)).ToList();
@@ -124,7 +170,7 @@ else
             }
             else
             {
-               adults = AdultService.getAdult().Result.OrderBy(x => x.GetType().GetProperty(columnName).GetValue(x, null)).ToList();
+                adults = AdultService.getAdult().Result.OrderBy(x => x.GetType().GetProperty(columnName).GetValue(x, null)).ToList();
                 StateHasChanged();
             }
             isSortedAscending = !isSortedAscending;
@@ -133,15 +179,17 @@ else
 
     private string SetSortIcon(string columnName)
     {
+        if (activeSortColumn.Equals("") && columnName.Equals("Id"))
+            return "oi-arrow-bottom";
         if (activeSortColumn != columnName)
         {
             return string.Empty;
         }
         if (isSortedAscending)
         {
-            return "oi-arrow-top";
+            return "oi-arrow-bottom";
         }
-        return "oi-arrow-bottom";
+        return "oi-arrow-top";
     }
 
 }
