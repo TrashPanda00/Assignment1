@@ -28,7 +28,21 @@ namespace Assignment1.Data
         public void Remove(Adult adultToRemove)
         {
             fileContext.Adults.Remove(adultToRemove);
+            ReassignIds();
             fileContext.SaveChanges();
+        }
+
+        public int GetCount()
+        {
+            return fileContext.Adults.Count;
+        }
+
+        private void ReassignIds()
+        {
+            for (int i = 0; i < GetCount(); i++)
+            {
+                fileContext.Adults[i].Id = i+1;
+            }
         }
     }
 }

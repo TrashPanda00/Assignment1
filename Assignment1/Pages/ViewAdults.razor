@@ -16,9 +16,14 @@ else
 {
     <input type="text" @bind-value="searchTerm" @bind-value:event="oninput"/>
     <br/>
+    <br/>
     <table class="table table-bordered table-hover">
         <thead>
         <tr>
+            <th class="sort-th" @onclick="@(() => SortTable("Id"))">
+                            ID
+                            <span class="oi @(SetSortIcon("Id"))"></span>
+                        </th>
             <th class="sort-th" @onclick="@(() => SortTable("FirstName"))">
                 First Name
                 <span class="oi @(SetSortIcon("FirstName"))"></span>
@@ -55,12 +60,14 @@ else
                 Job
                 <span class="oi @(SetSortIcon("JobTitle"))"></span>
             </th>
+            <th>Action</th>
         </tr>
         </thead>
         <tbody>
         @foreach (var adult in filteredAdults)
         {
             <tr>
+                <td>@adult.Id</td>
                 <td>@adult.FirstName</td>
                 <td>@adult.LastName</td>
                 <td>@adult.HairColor</td>
@@ -70,6 +77,9 @@ else
                 <td>@adult.Weight</td>
                 <td>@adult.Sex</td>
                 <td>@adult.JobTitle</td>
+                <td>
+                    <span class="btn btn-danger" @onclick="() => Remove(adult)">Delete</span>
+                </td>
             </tr>
         }
         </tbody>
@@ -79,21 +89,28 @@ else
 @code {
     private IList<Adult> adults;
     private string searchTerm = "";
-    public IList<Adult> filteredAdults  => adults.Where(i => i.FirstName.ToLower().StartsWith(searchTerm.ToLower())).ToList();
+    private bool isSortedAscending;
+    private string activeSortColumn;
+    public IList<Adult> filteredAdults => adults.Where(i => i.FirstName.ToLower().StartsWith(searchTerm.ToLower())).ToList();
 
     protected override async Task OnInitializedAsync()
     {
         adults = await AdultService.getAdult();
     }
+
+    private void Remove(Adult adultToRemove)
+    {
+        AdultService.Remove(adultToRemove);
+        adults.Remove(adultToRemove);
+        StateHasChanged();
+    }
     
-    private bool isSortedAscending;
-    private string activeSortColumn;
     private void SortTable(string columnName)
     {
         Console.WriteLine(columnName);
         if (columnName != activeSortColumn)
         {
-            adults = adults.OrderBy(x => x.GetType().GetProperty(columnName).GetValue(x, null)).ToList();
+            adults = AdultService.getAdult().Result.OrderBy(x => x.GetType().GetProperty(columnName).GetValue(x, null)).ToList();
             isSortedAscending = true;
             activeSortColumn = columnName;
             StateHasChanged();
@@ -102,17 +119,18 @@ else
         {
             if (isSortedAscending)
             {
-                adults = adults.OrderByDescending(x => x.GetType().GetProperty(columnName).GetValue(x, null)).ToList();
+                adults = AdultService.getAdult().Result.OrderByDescending(x => x.GetType().GetProperty(columnName).GetValue(x, null)).ToList();
                 StateHasChanged();
             }
             else
             {
-                adults = adults.OrderBy(x => x.GetType().GetProperty(columnName).GetValue(x, null)).ToList();
+               adults = AdultService.getAdult().Result.OrderBy(x => x.GetType().GetProperty(columnName).GetValue(x, null)).ToList();
                 StateHasChanged();
             }
             isSortedAscending = !isSortedAscending;
         }
     }
+
     private string SetSortIcon(string columnName)
     {
         if (activeSortColumn != columnName)
@@ -124,6 +142,6 @@ else
             return "oi-arrow-top";
         }
         return "oi-arrow-bottom";
-        
     }
+
 }

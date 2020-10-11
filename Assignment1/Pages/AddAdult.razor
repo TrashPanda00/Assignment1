@@ -44,6 +44,7 @@
 
     public void Add()
     {
+        adultToAdd.Id = AdultService.GetCount() + 1;
         AdultService.Add(adultToAdd);
     }
 

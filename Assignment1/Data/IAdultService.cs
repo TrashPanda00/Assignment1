@@ -9,5 +9,6 @@ namespace Assignment1.Data
         public Task<IList<Adult>> getAdult();
         public void Add(Adult newAdult);
         public void Remove(Adult adultToRemove);
+        public int GetCount();
     }
 }
