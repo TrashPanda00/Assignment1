@@ -14,6 +14,8 @@
 }
 else
 {
+    <input type="text" @bind-value="searchTerm" @bind-value:event="oninput" />
+    <br />
     <table class="table">
         <thead>
         <tr>
@@ -29,7 +31,7 @@ else
         </tr>
         </thead>
         <tbody>
-        @foreach (var adult in adults)
+        @foreach (var adult in filteredAdults)
         {
             <tr>
                 <td>@adult.FirstName</td>
@@ -49,6 +51,8 @@ else
 
 @code {
     private IList<Adult> adults;
+    private string searchTerm = "";
+    private IList<Adult> filteredAdults => adults.Where(i => i.FirstName.ToLower().StartsWith(searchTerm.ToLower())).ToList();
 
     protected override async Task OnInitializedAsync()
     {
