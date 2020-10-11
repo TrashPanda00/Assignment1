@@ -180,4 +180,12 @@ app {
         /* Never collapse the sidebar for wide screens */
         display: block;
     }
+    
+    .sort-th {
+        cursor: pointer;
+    }
+    
+    .oi {
+        float: right;
+    }
 }

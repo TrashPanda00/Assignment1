@@ -14,20 +14,47 @@
 }
 else
 {
-    <input type="text" @bind-value="searchTerm" @bind-value:event="oninput" />
-    <br />
-    <table class="table">
+    <input type="text" @bind-value="searchTerm" @bind-value:event="oninput"/>
+    <br/>
+    <table class="table table-bordered table-hover">
         <thead>
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Hair</th>
-            <th>Eyes</th>
-            <th>Age</th>
-            <th>Height</th>
-            <th>Weight</th>
-            <th>Sex</th>
-            <th>Job</th>
+            <th class="sort-th" @onclick="@(() => SortTable("FirstName"))">
+                First Name
+                <span class="oi @(SetSortIcon("FirstName"))"></span>
+            </th>
+            <th class="sort-th" @onclick="@(() => SortTable("LastName"))">
+                Last Name
+                <span class="oi @(SetSortIcon("LastName"))"></span>
+            </th>
+            <th class="sort-th" @onclick="@(() => SortTable("HairColor"))">
+                Hair
+                <span class="oi @(SetSortIcon("HairColor"))"></span>
+            </th>
+            <th class="sort-th" @onclick="@(() => SortTable("EyeColor"))">
+                Eyes
+                <span class="oi @(SetSortIcon("EyeColor"))"></span>
+            </th>
+            <th class="sort-th" @onclick="@(() => SortTable("Age"))">
+                Age
+                <span class="oi @(SetSortIcon("Age"))"></span>
+            </th>
+            <th class="sort-th" @onclick="@(() => SortTable("Height"))">
+                Height
+                <span class="oi @(SetSortIcon("Height"))"></span>
+            </th>
+            <th class="sort-th" @onclick="@(() => SortTable("Weight"))">
+                Weight
+                <span class="oi @(SetSortIcon("Weight"))"></span>
+            </th>
+            <th class="sort-th" @onclick="@(() => SortTable("Sex"))">
+                Sex
+                <span class="oi @(SetSortIcon("Sex"))"></span>
+            </th>
+            <th class="sort-th" @onclick="@(() => SortTable("JobTitle"))">
+                Job
+                <span class="oi @(SetSortIcon("JobTitle"))"></span>
+            </th>
         </tr>
         </thead>
         <tbody>
@@ -52,11 +79,51 @@ else
 @code {
     private IList<Adult> adults;
     private string searchTerm = "";
-    private IList<Adult> filteredAdults => adults.Where(i => i.FirstName.ToLower().StartsWith(searchTerm.ToLower())).ToList();
+    public IList<Adult> filteredAdults  => adults.Where(i => i.FirstName.ToLower().StartsWith(searchTerm.ToLower())).ToList();
 
     protected override async Task OnInitializedAsync()
     {
         adults = await AdultService.getAdult();
     }
-
+    
+    private bool isSortedAscending;
+    private string activeSortColumn;
+    private void SortTable(string columnName)
+    {
+        Console.WriteLine(columnName);
+        if (columnName != activeSortColumn)
+        {
+            adults = adults.OrderBy(x => x.GetType().GetProperty(columnName).GetValue(x, null)).ToList();
+            isSortedAscending = true;
+            activeSortColumn = columnName;
+            StateHasChanged();
+        }
+        else
+        {
+            if (isSortedAscending)
+            {
+                adults = adults.OrderByDescending(x => x.GetType().GetProperty(columnName).GetValue(x, null)).ToList();
+                StateHasChanged();
+            }
+            else
+            {
+                adults = adults.OrderBy(x => x.GetType().GetProperty(columnName).GetValue(x, null)).ToList();
+                StateHasChanged();
+            }
+            isSortedAscending = !isSortedAscending;
+        }
+    }
+    private string SetSortIcon(string columnName)
+    {
+        if (activeSortColumn != columnName)
+        {
+            return string.Empty;
+        }
+        if (isSortedAscending)
+        {
+            return "oi-arrow-top";
+        }
+        return "oi-arrow-bottom";
+        
+    }
 }
