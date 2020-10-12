@@ -3,9 +3,10 @@
 @using Assignment1.Data
 @inject IAdultService AdultService
 @using Models
+@using Syncfusion.Blazor.Data
 <div>
     <h1>Table of adults</h1>
-    <h6>Here you can view a detailed table of all adults. You can click on any column in order to sort the table either ascending or descending. </h6>
+    <h6>Here you can view a detailed table of all adults. You can click on any column in order to sort the table either ascending or descending. Typing in the searchbox will dinamically filter the table based on what search option is selected </h6>
 </div>
 @if (adults == null)
 {
@@ -16,47 +17,47 @@
 else
 {
     <div>
-        <input type="text" @bind-value="searchTerm" @bind-value:event="oninput" placeholder="Search here..." class="mb-2"/>
-        <b>Search by:</b>
-        <div class="radio-buttons">
+        <input type="text" value="@searchFilter" @oninput="@FilterChangedAsync" placeholder="Search here..."/>
+        <div class="radio-buttons pt-2">
+            <b>Search by:</b>
             <div class="couple">
-                <input type="radio" id="ID" name="search" value="Id">
+                <input type="radio" id="ID" name="search" value="Id" checked="checked" @onclick="(() => { RadioButtonClicked(1); })">
                 <label for="ID">ID</label>
             </div>
             <div class="couple">
-                <input type="radio" id="firstname" name="search" value="FirstName">
+                <input type="radio" id="firstname" name="search" value="FirstName" @onclick="(() => { RadioButtonClicked(2); })">
                 <label for="firstname">First Name</label>
             </div>
             <div class="couple">
-                <input type="radio" id="lastname" name="search" value="LastName">
+                <input type="radio" id="lastname" name="search" value="LastName" @onclick="(() => { RadioButtonClicked(3); })">
                 <label for="lastname">Last Name</label>
             </div>
             <div class="couple">
-                <input type="radio" id="hair" name="search" value="HairColor">
+                <input type="radio" id="hair" name="search" value="HairColor" @onclick="(() => { RadioButtonClicked(4); })">
                 <label for="hair">Hair Color</label>
             </div>
             <div class="couple">
-                <input type="radio" id="eyes" name="search" value="EyeColor">
+                <input type="radio" id="eyes" name="search" value="EyeColor" @onclick="(() => { RadioButtonClicked(5); })">
                 <label for="eyes">Eye Color</label>
             </div>
             <div class="couple">
-                <input type="radio" id="age" name="search" value="Age">
+                <input type="radio" id="age" name="search" value="Age" @onclick="(() => { RadioButtonClicked(6); })">
                 <label for="age">Age</label>
             </div>
             <div class="couple">
-                <input type="radio" id="height" name="search" value="Height">
+                <input type="radio" id="height" name="search" value="Height" @onclick="(() => { RadioButtonClicked(7); })">
                 <label for="height">Height</label>
             </div>
             <div class="couple">
-                <input type="radio" id="weight" name="search" value="Weight">
+                <input type="radio" id="weight" name="search" value="Weight" @onclick="(() => { RadioButtonClicked(8); })">
                 <label for="weigth">Weight</label>
             </div>
             <div class="couple">
-                <input type="radio" id="sex" name="search" value="Sex">
+                <input type="radio" id="sex" name="search" value="Sex" @onclick="(() => { RadioButtonClicked(9); })">
                 <label for="sex">Gender</label>
             </div>
             <div class="couple">
-                <input type="radio" id="job" name="search" value="JobTitle">
+                <input type="radio" id="job" name="search" value="JobTitle" @onclick="(() => { RadioButtonClicked(10); })">
                 <label for="job">Job Title</label>
             </div>
         </div>
@@ -110,7 +111,7 @@ else
             </tr>
             </thead>
             <tbody>
-            @foreach (var adult in filteredAdults)
+            @foreach (var adult in adults)
             {
                 <tr>
                     <td>@adult.Id</td>
@@ -135,13 +136,65 @@ else
 
 @code {
     private IList<Adult> adults;
-    private string searchTerm = "";
+    private string searchFilter = "";
     private bool isSortedAscending = true;
     private string activeSortColumn = "Id";
-    public IList<Adult> filteredAdults => adults.Where(i => i.FirstName.ToLower().StartsWith(searchTerm.ToLower())).ToList();
+    private int searchType = 1;
+
 
     protected override async Task OnInitializedAsync()
     {
+        adults = await AdultService.getAdult();
+    }
+
+    private async Task FilterChangedAsync(ChangeEventArgs args)
+    {
+        searchFilter = args.Value.ToString().Trim();
+        Search(searchFilter);
+    }
+
+    public async Task Search(string searchTerm)
+    {
+        adults = await AdultService.getAdult();
+        switch (searchType)
+        {
+            case 1:
+                adults = adults.Where(a => a.Id.ToString().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 2:
+                adults = adults.Where(a => a.FirstName.ToLower().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 3:
+                adults = adults.Where(a => a.LastName.ToLower().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 4:
+                adults = adults.Where(a => a.HairColor.ToLower().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 5:
+                adults = adults.Where(a => a.EyeColor.ToLower().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 6:
+                adults = adults.Where(a => a.Age.ToString().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 7:
+                adults = adults.Where(a => a.Height.ToString().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 8:
+                adults = adults.Where(a => a.Weight.ToString().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 9:
+                adults = adults.Where(a => a.Sex.ToLower().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+            case 10:
+                adults = adults.Where(a => a.JobTitle.ToLower().StartsWith(searchTerm.ToLower())).ToList();
+                break;
+        }
+    }
+
+    public async Task RadioButtonClicked(int num)
+    {
+        searchType = num;
+        searchFilter = "";
         adults = await AdultService.getAdult();
     }
 
