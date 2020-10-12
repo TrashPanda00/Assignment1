@@ -9,43 +9,57 @@
 <EditForm Model="@adultToAdd" OnValidSubmit="Add">
     <DataAnnotationsValidator/>
     <ValidationSummary/>
-    <a>First Name:</a>
-    <input type="text" @bind-value="adultToAdd.FirstName"/>
+    <div class="formBlock">
+    <label>First Name:<input type="text" @bind-value="adultToAdd.FirstName" disabled="@isDisabled"/></label>
     <br/>
-    <a>Last Name:</a>
-    <input type="text" @bind-value="adultToAdd.LastName"/>
+    <label>Last Name:<input type="text" @bind-value="adultToAdd.LastName" disabled="@isDisabled"/></label>
     <br/>
-    <a>Hair Color:</a>
-    <input type="text"@bind-value="adultToAdd.HairColor"/>
+    <label>Hair Color:<input type="text" @bind-value="adultToAdd.HairColor" disabled="@isDisabled"/></label>
     <br/>
-    <a>Eye Color:</a>
-    <input type="text" @bind-value="adultToAdd.EyeColor"/>
+    <label>Eye Color:<input type="text" @bind-value="adultToAdd.EyeColor" disabled="@isDisabled"/></label>
     <br/>
-    <a>Age:</a>
-    <input type="text" @bind-value="adultToAdd.Age"/>
+    <label>Age:<input type="number" @bind-value="adultToAdd.Age" disabled="@isDisabled"/></label>
     <br/>
-    <a>Height:</a>
-    <input type="text" @bind-value="adultToAdd.Height"/>
+    <label>Height:<input type="number" @bind-value="adultToAdd.Height" disabled="@isDisabled"/></label>
     <br/>
-    <a>Weight:</a>
-    <input type="text" @bind-value="adultToAdd.Weight"/>
+    <label>Weight:<input type="number" @bind-value="adultToAdd.Weight" disabled="@isDisabled"/></label>
     <br/>
-    <a>Sex:</a>
-    <input type="text" @bind-value="adultToAdd.Sex"/>
+    <label>Gender:<select @bind="adultToAdd.Sex" disabled="@isDisabled">
+        <option value="">--Select an option--</option>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+        <option value="Other">Other</option>
+    </select></label>
     <br/>
-    <a>Job:</a>
-    <input type="text" @bind-value="adultToAdd.JobTitle"/>
+    <label>Job:<input type="text" @bind-value="adultToAdd.JobTitle" disabled="@isDisabled"/></label>
     <br/>
-    <input type="submit" class="btn btn-primary" value="Add Adult" />
+    </div>
+    <input type="submit" class="btn btn-primary" value="Submit" disabled="@isDisabled"/>
+    <input type="button" class="btn btn-success" value="Add another adult" @onclick="@GoAgain" disabled="@isBtnDisabled"/>
+    <div class="alert alert-success pt-2" style="@display">Adult added successfully!</div>
 </EditForm>
 
 @code {
-    Adult adultToAdd = new Adult();
+    Adult adultToAdd { get; set; } = new Adult();
+    public bool isDisabled = false;
+    public bool isBtnDisabled = true;
+    public string display = "display: none";
 
     public void Add()
     {
         adultToAdd.Id = AdultService.GetCount() + 1;
         AdultService.Add(adultToAdd);
+        isDisabled = true;
+        isBtnDisabled = false;
+        display = "display: block";
+    }
+
+    public void GoAgain()
+    {
+        adultToAdd = new Adult();
+        isDisabled = false;
+        isBtnDisabled = true;
+        display = "display: none";
     }
 
 }

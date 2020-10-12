@@ -6,16 +6,16 @@
 @inject NavigationManager NavigationManager;
 
 <h1 xmlns="http://www.w3.org/1999/html">Welcome back!</h1>
-<AuthorizeView>
+<AuthorizeView Policy="MustBeLoggedIn">
     <NotAuthorized>
-        <form>
+        <form @onsubmit="@PerformLogIn">
             <a>Username:</a>
             <input type="text" @bind-value="Username"/>
             <br/>
             <a>Password:</a>
             <input type="password" @bind-value="Password"/>
             <br/>
-            <button @onclick="PerformLogIn">Log in</button>
+            <button type="submit">Log in</button>
             <br/>
             <p style="color: red">@ErrorMessage</p>
         </form>
@@ -33,12 +33,13 @@
     public async Task PerformLogIn()
     {
         ErrorMessage = "";
+        
         try
         {
             ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(Username, Password);
+            NavigationManager.NavigateTo("/");
             Username = "";
             Password = "";
-            NavigationManager.NavigateTo("/");
         }
         catch (Exception e)
         {
