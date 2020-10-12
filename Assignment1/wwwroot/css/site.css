@@ -208,8 +208,12 @@ app {
 
     .formBlock label, .formBlock select, .formBlock input{
         display: inline-block;
-        width: 170px;
+        width: 228px;
         text-align: left;
+    }
+    
+    .alert {
+        width: 228px;
     }
     
 }

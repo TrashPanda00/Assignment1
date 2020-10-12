@@ -31,12 +31,22 @@
         <option value="Other">Other</option>
     </select></label>
     <br/>
-    <label>Job:<input type="text" @bind-value="adultToAdd.JobTitle" disabled="@isDisabled"/></label>
+    <label>Job:<input type="text" @bind-value="adultToAdd.JobTitle" disabled="@isDisabled" list="jobs"/>
+        <datalist id="jobs">
+            <option>Database Manager</option>
+            <option>Captain</option>
+            <option>Veterenarian</option>
+            <option>Personal Trainer</option>
+            <option>Talent Acquisition Coordinator</option>
+            <option>Electrical Engineer</option>
+            <option>Front Desk Coordinator</option>
+            <option>Aquatic Ecologist</option>
+        </datalist></label>
     <br/>
     </div>
     <input type="submit" class="btn btn-primary" value="Submit" disabled="@isDisabled"/>
     <input type="button" class="btn btn-success" value="Add another adult" @onclick="@GoAgain" disabled="@isBtnDisabled"/>
-    <div class="alert alert-success pt-2" style="@display">Adult added successfully!</div>
+    <div class="alert alert-success mt-2" style="@display">Adult added successfully!</div>
 </EditForm>
 
 @code {

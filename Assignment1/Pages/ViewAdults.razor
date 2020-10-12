@@ -107,7 +107,11 @@ else
                     Job Title
                     <span class="oi @(SetSortIcon("JobTitle"))"></span>
                 </th>
-                <th>Action</th>
+                <AuthorizeView Policy="MustBeLoggedIn">
+                    <Authorized>
+                        <th>Action</th>
+                    </Authorized>
+                </AuthorizeView>
             </tr>
             </thead>
             <tbody>
@@ -124,9 +128,13 @@ else
                     <td>@adult.Weight</td>
                     <td>@adult.Sex</td>
                     <td>@adult.JobTitle</td>
-                    <td>
-                        <span class="btn btn-danger" @onclick="() => Remove(adult)">Delete</span>
-                    </td>
+                    <AuthorizeView Policy="MustBeLoggedIn">
+                        <Authorized>
+                            <td>
+                                <span class="btn btn-danger" @onclick="() => Remove(adult)">Delete</span>
+                            </td>
+                        </Authorized>
+                    </AuthorizeView>
                 </tr>
             }
             </tbody>

@@ -8,20 +8,19 @@
 <h1 xmlns="http://www.w3.org/1999/html">Welcome back!</h1>
 <AuthorizeView Policy="MustBeLoggedIn">
     <NotAuthorized>
+        <div class="formBlock">
         <form @onsubmit="@PerformLogIn">
-            <a>Username:</a>
-            <input type="text" @bind-value="Username"/>
+            <label>Username:<input type="text" @bind-value="Username"/></label>
             <br/>
-            <a>Password:</a>
-            <input type="password" @bind-value="Password"/>
+            <label>Password:<input type="password" @bind-value="Password"/></label>
             <br/>
-            <button type="submit">Log in</button>
-            <br/>
-            <p style="color: red">@ErrorMessage</p>
+            <button type="submit" class="btn btn-success">Log in</button>
+            <p style="color: red; display: inline" class="pl-2">@ErrorMessage</p>
         </form>
+        </div>
     </NotAuthorized>
     <Authorized>
-        <button @onclick="PerformLogOut">Log out</button>
+        <button @onclick="PerformLogOut" class="btn btn-success">Log out</button>
     </Authorized>
 </AuthorizeView>
 

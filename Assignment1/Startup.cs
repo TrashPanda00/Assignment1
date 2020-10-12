@@ -33,7 +33,6 @@ namespace Assignment1
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
             services.AddScoped<IUserData, UserData>();
             services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
             services.AddSingleton<IAdultService, AdultService>();
