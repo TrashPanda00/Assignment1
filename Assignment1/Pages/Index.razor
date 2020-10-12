@@ -20,7 +20,8 @@ Assingment 1 - DNP - VIA University College - Bogdan Mezei (293137)
    
    private string getName()
    {
-      return ((CustomAuthenticationStateProvider) AuthenticationStateProvider).GetAuthenticationStateAsync().Result.User.Claims.ToList()[1].Value;
+      return ((CustomAuthenticationStateProvider) AuthenticationStateProvider).GetAuthenticationStateAsync().Result.User.Claims.ToList()[1].Value + " " + 
+             ((CustomAuthenticationStateProvider) AuthenticationStateProvider).GetAuthenticationStateAsync().Result.User.Claims.ToList()[2].Value;
    }
 
 
