@@ -7,12 +7,12 @@
 
 <h1>Charts</h1>
 <div class="control-section">
-    <SfAccumulationChart Title="Eye Color Distribution" EnableAnimation="true">
+    <SfAccumulationChart Title="Eye Color Distribution" EnableAnimation="false">
         <AccumulationChartEvents Load="BeforeRender"/>
         <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
         <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
         <AccumulationChartSeriesCollection>
-            <AccumulationChartSeries DataSource="@dataSource" XName="xValue" YName="yValue" Name="Browser" Radius="@OuterRadius" StartAngle="@StartAngle" EndAngle="@EndAngle"
+            <AccumulationChartSeries DataSource="@dataSource" XName="xValue" YName="yValue" Name="Eye Color" Radius="@OuterRadius" StartAngle="@StartAngle" EndAngle="@EndAngle"
                                      InnerRadius="0%" ExplodeIndex="@ExplodeIndex" Explode="true" ExplodeOffset="@ExplodeRadius">
                 <AccumulationDataLabelSettings Visible="true" Name="xValue" Position="AccumulationLabelPosition.Outside"></AccumulationDataLabelSettings>
             </AccumulationChartSeries>
@@ -39,6 +39,7 @@
             new PieData1 {xValue = "Amber", yValue = eyeColorNumber("Amber")},
             new PieData1 {xValue = "Hazel", yValue = eyeColorNumber("Hazel")}
         };
+        
     }
 
     public class PieData1
