@@ -502,5 +502,17 @@
     "Weight": 100.9,
     "Height": 177,
     "Sex": "F"
+  },
+  {
+    "JobTitle": "Database Manager",
+    "Id": 43,
+    "FirstName": "Bogdan",
+    "LastName": "Mezei",
+    "HairColor": "Brown",
+    "EyeColor": "Brown",
+    "Age": 20,
+    "Weight": 75,
+    "Height": 190,
+    "Sex": "M"
   }
 ]

@@ -8,10 +8,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="864bd38f-554e-4c37-b95a-20e5a31b2f3c" name="Default Changelist" comment="Added chart for weight/age">
+    <list default="true" id="864bd38f-554e-4c37-b95a-20e5a31b2f3c" name="Default Changelist" comment="Styling">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Shared/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Shared/MainLayout.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Shared/NavMenu.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Model/Child.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Model/ChildInterest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Model/Family.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Model/Interest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Model/Pet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/AddAdult.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/AddAdult.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/Charts.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/Charts.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/Index.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/LogIn.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/LogIn.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/Register.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/Register.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/ViewAdults.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/ViewAdults.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/users.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +34,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/AddAdult.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Shared/MainLayout.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Shared/MainLayout.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Data/AdultService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/AddAdult.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
@@ -43,11 +55,8 @@
         <option value="$PROJECT_DIR$/Assignment1/Pages/Add Adult.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Model/Person.cs" />
         <option value="$PROJECT_DIR$/Assignment1/adults.json" />
-        <option value="$PROJECT_DIR$/Assignment1/Pages/ViewAdults.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Data/IUserData.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Data/FileContext.cs" />
-        <option value="$PROJECT_DIR$/Assignment1/Pages/Register.razor" />
-        <option value="$PROJECT_DIR$/Assignment1/Pages/LogIn.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Program.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Pages/_Host.cshtml" />
         <option value="$PROJECT_DIR$/Assignment1/Data/Statistics.cs" />
@@ -58,12 +67,16 @@
         <option value="$PROJECT_DIR$/Assignment1/Auth/UserData.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Auth/CustomAuthenticationStateProvider.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Startup.cs" />
-        <option value="$PROJECT_DIR$/Assignment1/Pages/Index.razor" />
-        <option value="$PROJECT_DIR$/Assignment1/Pages/AddAdult.razor" />
         <option value="$PROJECT_DIR$/Assignment1/wwwroot/css/site.css" />
-        <option value="$PROJECT_DIR$/Assignment1/Pages/Charts.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Shared/NavMenu.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Shared/MainLayout.razor" />
+        <option value="$PROJECT_DIR$/Assignment1/Pages/Index.razor" />
+        <option value="$PROJECT_DIR$/Assignment1/Pages/Register.razor" />
+        <option value="$PROJECT_DIR$/Assignment1/Pages/ViewAdults.razor" />
+        <option value="$PROJECT_DIR$/Assignment1/Pages/Charts.razor" />
+        <option value="$PROJECT_DIR$/Assignment1/Pages/AddAdult.razor" />
+        <option value="$PROJECT_DIR$/Assignment1/Pages/LogIn.razor" />
+        <option value="$PROJECT_DIR$/Assignment1/users.json" />
       </list>
     </option>
   </component>
@@ -128,7 +141,7 @@
       <workItem from="1602346939386" duration="33573000" />
       <workItem from="1602509677142" duration="25491000" />
       <workItem from="1602583910793" duration="8995000" />
-      <workItem from="1602618302979" duration="11617000" />
+      <workItem from="1602618302979" duration="12530000" />
     </task>
     <task id="LOCAL-00001" summary="Unfinished">
       <created>1602191506173</created>
@@ -263,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602630154855</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Styling">
+      <created>1602630797436</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1602630797436</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,11 +294,41 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
           </value>
         </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
@@ -302,39 +352,40 @@
     <MESSAGE value="Working first chart - wrong colors" />
     <MESSAGE value="Added chart" />
     <MESSAGE value="Added chart for weight/age" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added chart for weight/age" />
+    <MESSAGE value="Styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Styling" />
   </component>
   <component name="WindowStateProjectService">
     <state x="960" y="275" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602434233696">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="960" y="275" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602434233696" />
-    <state x="0" y="23" width="2048" height="892" key="DiffContextDialog" timestamp="1602626035671">
+    <state x="0" y="23" width="2048" height="892" key="DiffContextDialog" timestamp="1602631129985">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="0" y="23" width="2048" height="892" key="DiffContextDialog/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602626035671" />
-    <state width="2517" height="165" key="GridCell.Tab.0.bottom" timestamp="1602630481315">
+    <state x="0" y="23" width="2048" height="892" key="DiffContextDialog/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602631129985" />
+    <state width="2517" height="165" key="GridCell.Tab.0.bottom" timestamp="1602631675751">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="165" key="GridCell.Tab.0.bottom/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602630481315" />
+    <state width="2517" height="165" key="GridCell.Tab.0.bottom/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602631675751" />
     <state width="1493" height="122" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
-    <state width="2517" height="165" key="GridCell.Tab.0.center" timestamp="1602630481315">
+    <state width="2517" height="165" key="GridCell.Tab.0.center" timestamp="1602631675751">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="165" key="GridCell.Tab.0.center/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602630481315" />
+    <state width="2517" height="165" key="GridCell.Tab.0.center/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602631675751" />
     <state width="1493" height="122" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
-    <state width="2517" height="165" key="GridCell.Tab.0.left" timestamp="1602630481315">
+    <state width="2517" height="165" key="GridCell.Tab.0.left" timestamp="1602631675751">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="165" key="GridCell.Tab.0.left/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602630481315" />
+    <state width="2517" height="165" key="GridCell.Tab.0.left/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602631675751" />
     <state width="1493" height="122" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
-    <state width="2517" height="165" key="GridCell.Tab.0.right" timestamp="1602630481315">
+    <state width="2517" height="165" key="GridCell.Tab.0.right" timestamp="1602631675751">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="165" key="GridCell.Tab.0.right/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602630481315" />
+    <state width="2517" height="165" key="GridCell.Tab.0.right/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602631675751" />
     <state width="1493" height="122" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
     <state width="2517" height="315" key="GridCell.Tab.1.bottom" timestamp="1602552158198">
@@ -429,10 +480,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1602167775192" />
-    <state x="602" y="206" key="Vcs.Push.Dialog.v2" timestamp="1602630159905">
+    <state x="602" y="206" key="Vcs.Push.Dialog.v2" timestamp="1602630803747">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="602" y="206" key="Vcs.Push.Dialog.v2/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602630159905" />
+    <state x="602" y="206" key="Vcs.Push.Dialog.v2/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602630803747" />
     <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1602191517952" />
     <state x="602" y="206" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1602350779472" />
     <state x="92" y="92" width="2376" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1602630787581">
@@ -443,6 +494,14 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="92" y="92" width="2376" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602626035671" />
+    <state x="1097" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602630908340">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="1097" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602630908340" />
+    <state x="1053" y="441" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602630950718">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="1053" y="441" key="git4idea.remote.GitConfigureRemotesDialog/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602630950718" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1602175417818">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

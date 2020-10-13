@@ -1,20 +1,8 @@
 [
   {
-    "Username": "hey",
-    "Password": "123",
-    "FirstName": "was",
-    "LastName": "was"
-  },
-  {
     "Username": "TrashPanda",
-    "Password": "ASDert10",
+    "Password": "123",
     "FirstName": "Bogdan",
     "LastName": "Mezei"
-  },
-  {
-    "Username": "bazik",
-    "Password": "1234",
-    "FirstName": "Dawid",
-    "LastName": "Tabol"
   }
 ]
