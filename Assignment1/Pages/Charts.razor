@@ -8,7 +8,7 @@
 
 <h1>Table Data Visualized</h1>
 <div class="control-section couple">
-    <SfAccumulationChart Title="Eye Color Distribution" EnableAnimation="false">
+    <SfAccumulationChart Title="Eye Color Distribution" EnableAnimation="true">
         <AccumulationChartEvents Load="BeforeRender"/>
         <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
         <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
@@ -19,24 +19,39 @@
             </AccumulationChartSeries>
         </AccumulationChartSeriesCollection>
     </SfAccumulationChart>
+
+    <SfAccumulationChart Title="Hair Color Distribution" EnableAnimation="true">
+        <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
+        <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
+        <AccumulationChartSeriesCollection>
+            <AccumulationChartSeries DataSource="@dataSource2" XName="xValue" YName="yValue" Name="Hair Color" Radius="@OuterRadius" StartAngle="@StartAngle" EndAngle="@EndAngle"
+                                     InnerRadius="0%" ExplodeIndex="@ExplodeIndex" Explode="true" ExplodeOffset="@ExplodeRadius">
+                <AccumulationDataLabelSettings Visible="false" Name="xValue" Position="AccumulationLabelPosition.Outside"></AccumulationDataLabelSettings>
+            </AccumulationChartSeries>
+        </AccumulationChartSeriesCollection>
+    </SfAccumulationChart>
     
-    <SfAccumulationChart Title="Hair Color Distribution" EnableAnimation="false">
-            <AccumulationChartEvents Load="BeforeRender"/>
-            <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
-            <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
-            <AccumulationChartSeriesCollection>
-                <AccumulationChartSeries DataSource="@dataSource2" XName="xValue" YName="yValue" Name="Hair Color" Radius="@OuterRadius" StartAngle="@StartAngle" EndAngle="@EndAngle"
-                                         InnerRadius="0%" ExplodeIndex="@ExplodeIndex" Explode="true" ExplodeOffset="@ExplodeRadius">
-                    <AccumulationDataLabelSettings Visible="false" Name="xValue" Position="AccumulationLabelPosition.Outside"></AccumulationDataLabelSettings>
-                </AccumulationChartSeries>
-            </AccumulationChartSeriesCollection>
-        </SfAccumulationChart>
+    <SfChart Width="60%" Title="Weight by Age Chart">
+        <ChartPrimaryXAxis Title="Weight" EnableTrim="false">
+            <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
+        </ChartPrimaryXAxis>
+         <ChartPrimaryYAxis Title="Age" EnableTrim="false">
+         </ChartPrimaryYAxis>
+        <ChartSeriesCollection>
+            <ChartSeries DataSource="@dataSource3" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
+                <ChartMarker Visible="false" Height="10" Width="10">
+                </ChartMarker>
+            </ChartSeries>
+        </ChartSeriesCollection>
+    </SfChart>
+
 </div>
 
 @code {
     public static IList<Adult> adults = new List<Adult>();
     public List<PieData1> dataSource { get; set; } = new List<PieData1>();
     public List<PieData1> dataSource2 { get; set; } = new List<PieData1>();
+    public List<AgeWeight> dataSource3 { get; set; } = new List<AgeWeight>();
     public int StartAngle = 0, EndAngle = 360;
     public double ExplodeIndex = 1;
     public string OuterRadius = "70%", ExplodeRadius = "10%";
@@ -44,29 +59,6 @@
     protected override async Task OnInitializedAsync()
     {
         adults = await AdultService.getAdult();
-        dataSource = new List<PieData1>
-        {
-            new PieData1 {xValue = "Brown", yValue = eyeColorNumber("Brown")},
-            new PieData1 {xValue = "Grey", yValue = eyeColorNumber("Grey")},
-            new PieData1 {xValue = "Green", yValue = eyeColorNumber("Green")},
-            new PieData1 {xValue = "Blue", yValue = eyeColorNumber("Blue")},
-            new PieData1 {xValue = "Amber", yValue = eyeColorNumber("Amber")},
-            new PieData1 {xValue = "Hazel", yValue = eyeColorNumber("Hazel")}
-        };
-        dataSource2 = new List<PieData1>
-        {
-            new PieData1 {xValue = "Blond", yValue = hairColorNumber("Blond")},
-            new PieData1 {xValue = "Red", yValue = hairColorNumber("Red")},
-            new PieData1 {xValue = "Brown", yValue = hairColorNumber("Brown")},
-            new PieData1 {xValue = "Black", yValue = hairColorNumber("Black")},
-            new PieData1 {xValue = "White", yValue = hairColorNumber("White")},
-            new PieData1 {xValue = "Grey", yValue = hairColorNumber("Grey")},
-            new PieData1 {xValue = "Blue", yValue = hairColorNumber("Blue")},
-            new PieData1 {xValue = "Green", yValue = hairColorNumber("Green")},
-            new PieData1 {xValue = "Leverpostej", yValue = hairColorNumber("Leverpostej")}
-        };
-        StateHasChanged();
-        
     }
 
     public class PieData1
@@ -76,6 +68,25 @@
         public string R { get; set; }
     }
 
+    public class AgeWeight
+    {
+        public float X;
+        public int Y;
+
+        public AgeWeight(float X, int Y)
+        {
+            this.X = X;
+            this.Y = Y;
+        }
+    }
+
+    public void initAgeWeight()
+    {
+        foreach (var adult in adults)
+        {
+            dataSource3.Add(new AgeWeight(adult.Weight, adult.Age));
+        }
+    }
 
     public static int eyeColorNumber(string eyeColor)
     {
@@ -104,7 +115,29 @@
     void BeforeRender(IAccLoadedEventArgs Args)
     {
         Args.Theme = AccumulationTheme.Material;
-        StateHasChanged();
+        dataSource = new List<PieData1>
+        {
+            new PieData1 {xValue = "Brown", yValue = eyeColorNumber("Brown")},
+            new PieData1 {xValue = "Grey", yValue = eyeColorNumber("Grey")},
+            new PieData1 {xValue = "Green", yValue = eyeColorNumber("Green")},
+            new PieData1 {xValue = "Blue", yValue = eyeColorNumber("Blue")},
+            new PieData1 {xValue = "Amber", yValue = eyeColorNumber("Amber")},
+            new PieData1 {xValue = "Hazel", yValue = eyeColorNumber("Hazel")}
+        };
+        dataSource2 = new List<PieData1>
+        {
+            new PieData1 {xValue = "Blond", yValue = hairColorNumber("Blond")},
+            new PieData1 {xValue = "Red", yValue = hairColorNumber("Red")},
+            new PieData1 {xValue = "Brown", yValue = hairColorNumber("Brown")},
+            new PieData1 {xValue = "Black", yValue = hairColorNumber("Black")},
+            new PieData1 {xValue = "White", yValue = hairColorNumber("White")},
+            new PieData1 {xValue = "Grey", yValue = hairColorNumber("Grey")},
+            new PieData1 {xValue = "Blue", yValue = hairColorNumber("Blue")},
+            new PieData1 {xValue = "Green", yValue = hairColorNumber("Green")},
+            new PieData1 {xValue = "Leverpostej", yValue = hairColorNumber("Leverpostej")}
+        };
+        initAgeWeight();
     }
+    
 
 }

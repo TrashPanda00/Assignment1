@@ -502,41 +502,5 @@
     "Weight": 100.9,
     "Height": 177,
     "Sex": "F"
-  },
-  {
-    "JobTitle": "Talent Acquisition Coordinator",
-    "Id": 43,
-    "FirstName": "dfds",
-    "LastName": "fdsf",
-    "HairColor": "brown",
-    "EyeColor": "brown",
-    "Age": 1,
-    "Weight": 65,
-    "Height": 65,
-    "Sex": "M"
-  },
-  {
-    "JobTitle": "Captain",
-    "Id": 44,
-    "FirstName": "dsa",
-    "LastName": "dasd",
-    "HairColor": "brown",
-    "EyeColor": "brown",
-    "Age": 1,
-    "Weight": 56,
-    "Height": 65,
-    "Sex": "M"
-  },
-  {
-    "JobTitle": "Captain",
-    "Id": 45,
-    "FirstName": "wwasdas",
-    "LastName": "sdads",
-    "HairColor": "brown",
-    "EyeColor": "brown",
-    "Age": 4,
-    "Weight": 65,
-    "Height": 56,
-    "Sex": "F"
   }
 ]

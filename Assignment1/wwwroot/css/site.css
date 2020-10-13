@@ -200,6 +200,7 @@ app {
         display: flex;
         justify-content: space-around;
         align-items: baseline;
+        flex-wrap: wrap;
     }
     
     input[type="radio"] {
