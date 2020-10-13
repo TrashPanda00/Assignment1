@@ -6,8 +6,8 @@
 @using Syncfusion.Licensing
 @inject IAdultService AdultService;
 
-<h1>Charts</h1>
-<div class="control-section">
+<h1>Table Data Visualized</h1>
+<div class="control-section couple">
     <SfAccumulationChart Title="Eye Color Distribution" EnableAnimation="false">
         <AccumulationChartEvents Load="BeforeRender"/>
         <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
@@ -15,15 +15,28 @@
         <AccumulationChartSeriesCollection>
             <AccumulationChartSeries DataSource="@dataSource" XName="xValue" YName="yValue" Name="Eye Color" Radius="@OuterRadius" StartAngle="@StartAngle" EndAngle="@EndAngle"
                                      InnerRadius="0%" ExplodeIndex="@ExplodeIndex" Explode="true" ExplodeOffset="@ExplodeRadius">
-                <AccumulationDataLabelSettings Visible="true" Name="xValue" Position="AccumulationLabelPosition.Outside"></AccumulationDataLabelSettings>
+                <AccumulationDataLabelSettings Visible="false" Name="xValue" Position="AccumulationLabelPosition.Outside"></AccumulationDataLabelSettings>
             </AccumulationChartSeries>
         </AccumulationChartSeriesCollection>
     </SfAccumulationChart>
+    
+    <SfAccumulationChart Title="Hair Color Distribution" EnableAnimation="false">
+            <AccumulationChartEvents Load="BeforeRender"/>
+            <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
+            <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
+            <AccumulationChartSeriesCollection>
+                <AccumulationChartSeries DataSource="@dataSource2" XName="xValue" YName="yValue" Name="Hair Color" Radius="@OuterRadius" StartAngle="@StartAngle" EndAngle="@EndAngle"
+                                         InnerRadius="0%" ExplodeIndex="@ExplodeIndex" Explode="true" ExplodeOffset="@ExplodeRadius">
+                    <AccumulationDataLabelSettings Visible="false" Name="xValue" Position="AccumulationLabelPosition.Outside"></AccumulationDataLabelSettings>
+                </AccumulationChartSeries>
+            </AccumulationChartSeriesCollection>
+        </SfAccumulationChart>
 </div>
 
 @code {
     public static IList<Adult> adults = new List<Adult>();
     public List<PieData1> dataSource { get; set; } = new List<PieData1>();
+    public List<PieData1> dataSource2 { get; set; } = new List<PieData1>();
     public int StartAngle = 0, EndAngle = 360;
     public double ExplodeIndex = 1;
     public string OuterRadius = "70%", ExplodeRadius = "10%";
@@ -40,6 +53,19 @@
             new PieData1 {xValue = "Amber", yValue = eyeColorNumber("Amber")},
             new PieData1 {xValue = "Hazel", yValue = eyeColorNumber("Hazel")}
         };
+        dataSource2 = new List<PieData1>
+        {
+            new PieData1 {xValue = "Blond", yValue = hairColorNumber("Blond")},
+            new PieData1 {xValue = "Red", yValue = hairColorNumber("Red")},
+            new PieData1 {xValue = "Brown", yValue = hairColorNumber("Brown")},
+            new PieData1 {xValue = "Black", yValue = hairColorNumber("Black")},
+            new PieData1 {xValue = "White", yValue = hairColorNumber("White")},
+            new PieData1 {xValue = "Grey", yValue = hairColorNumber("Grey")},
+            new PieData1 {xValue = "Blue", yValue = hairColorNumber("Blue")},
+            new PieData1 {xValue = "Green", yValue = hairColorNumber("Green")},
+            new PieData1 {xValue = "Leverpostej", yValue = hairColorNumber("Leverpostej")}
+        };
+        StateHasChanged();
         
     }
 
@@ -57,6 +83,17 @@
         foreach (var adult in adults)
         {
             if (adult.EyeColor.ToLower().Equals(eyeColor.ToLower()))
+                n++;
+        }
+        return n;
+    }
+    
+    public static int hairColorNumber(string hairColor)
+    {
+        int n = 0;
+        foreach (var adult in adults)
+        {
+            if (adult.HairColor.ToLower().Equals(hairColor.ToLower()))
                 n++;
         }
         return n;
