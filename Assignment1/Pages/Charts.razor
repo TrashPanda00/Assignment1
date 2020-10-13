@@ -3,6 +3,7 @@
 @using Models
 @using Assignment1.Data
 @using Syncfusion.Blazor.PivotView
+@using Syncfusion.Licensing
 @inject IAdultService AdultService;
 
 <h1>Charts</h1>
@@ -65,7 +66,7 @@
 
     void BeforeRender(IAccLoadedEventArgs Args)
     {
-        Args.Theme = AccumulationTheme.Fabric;
+        Args.Theme = AccumulationTheme.Material;
         StateHasChanged();
     }
 
