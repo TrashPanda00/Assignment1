@@ -1,0 +1,89 @@
+﻿@page "/charts"
+@using Syncfusion.Blazor
+@using Models
+@using Assignment1.Data
+@inject NavigationManager NavigationManager;
+@inject IAdultService AdultService;
+
+<h1>Charts</h1>
+<div class="control-section">
+    <SfAccumulationChart Title="Eye Color Distribution" EnableAnimation="true">
+        <AccumulationChartEvents Load="BeforeRender"/>
+        <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
+        <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
+        <AccumulationChartSeriesCollection>
+            <AccumulationChartSeries DataSource="@dataSource" XName="xValue" YName="yValue" Name="Browser" Radius="@OuterRadius" StartAngle="@StartAngle" EndAngle="@EndAngle"
+                                     InnerRadius="0%" ExplodeIndex="@ExplodeIndex" Explode="true" ExplodeOffset="@ExplodeRadius">
+                <AccumulationDataLabelSettings Visible="true" Name="xValue" Position="AccumulationLabelPosition.Outside"></AccumulationDataLabelSettings>
+            </AccumulationChartSeries>
+        </AccumulationChartSeriesCollection>
+    </SfAccumulationChart>
+</div>
+
+@code {
+    public static IList<Adult> adults = new List<Adult>();
+    public int StartAngle = 0, EndAngle = 360;
+    public double ExplodeIndex = 1;
+    public string OuterRadius = "70%", ExplodeRadius = "10%";
+    
+    protected override async Task OnInitializedAsync()
+    {
+        adults = await AdultService.getAdult();
+    }
+
+    public class PieData1
+    {
+        public string xValue { get; set; }
+        public double yValue { get; set; }
+        public string R { get; set; }
+    }
+
+    private List<PieData1> dataSource = new List<PieData1>
+    {
+        new PieData1 {xValue = "Brown", yValue = eyeColorNumber("Brown")},
+        new PieData1 {xValue = "Grey", yValue = eyeColorNumber("Grey")},
+        new PieData1 {xValue = "Green", yValue = eyeColorNumber("Green")},
+        new PieData1 {xValue = "Blue", yValue = eyeColorNumber("Blue")},
+        new PieData1 {xValue = "Amber", yValue = eyeColorNumber("Amber")},
+        new PieData1 {xValue = "Hazel", yValue = eyeColorNumber("Hazel")}
+    };
+
+    public static int eyeColorNumber(string eyeColor)
+    {
+        int n = 0;
+        foreach (var adult in adults)
+        {
+            if (adult.EyeColor.ToLower().Equals(eyeColor.ToLower()))
+                n++;
+        }
+        return n;
+    }
+
+    string CurrentUri;
+
+    void BeforeRender(IAccLoadedEventArgs Args)
+    {
+        CurrentUri = NavigationManager.Uri;
+        if (CurrentUri.IndexOf("material") > -1)
+        {
+            Args.Theme = AccumulationTheme.Material;
+        }
+        else if (CurrentUri.IndexOf("fabric") > -1)
+        {
+            Args.Theme = AccumulationTheme.Fabric;
+        }
+        else if (CurrentUri.IndexOf("bootstrap") > -1)
+        {
+            Args.Theme = AccumulationTheme.Bootstrap;
+        }
+        else if (CurrentUri.IndexOf("highcontrast") > -1)
+        {
+            Args.Theme = AccumulationTheme.HighContrast;
+        }
+        else
+        {
+            Args.Theme = AccumulationTheme.Bootstrap4;
+        }
+    }
+
+}

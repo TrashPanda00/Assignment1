@@ -8,6 +8,7 @@ namespace Assignment1.Data
     public class AdultService : IAdultService
     {
         private FileContext fileContext;
+        public Statistics Statistics;
 
         public AdultService()
         {

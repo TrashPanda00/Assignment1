@@ -14,6 +14,7 @@ using Assignment1.Data;
 using FileData;
 using Microsoft.AspNetCore.Components.Authorization;
 using Models;
+using Syncfusion.Blazor;
 
 
 namespace Assignment1
@@ -36,6 +37,7 @@ namespace Assignment1
             services.AddScoped<IUserData, UserData>();
             services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
             services.AddSingleton<IAdultService, AdultService>();
+            services.AddSyncfusionBlazor();
 
             services.AddAuthorization(options =>
             {
@@ -46,6 +48,7 @@ namespace Assignment1
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzMzODg4QDMxMzgyZTMzMmUzMENkZVo1NzlnT2lZSUFiV1F0WGhNZ1VvdDhjYUhUMUwxVkFUbllIeVFYMFk9");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
