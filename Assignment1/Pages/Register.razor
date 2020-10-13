@@ -1,0 +1,36 @@
+﻿@page "/register"
+@using Assignment1.Data
+@using Assignment1.Model
+@using Models
+
+@inject IUserData UserData;
+
+<h1>Register a new account</h1>
+<EditForm Model="@userToAdd" OnValidSubmit="Add">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div class="formBlock">
+    <label>First Name:<input type="text" @bind-value="userToAdd.FirstName" disabled="@isDisabled"/></label>
+    <br/>
+    <label>Last Name:<input type="text" @bind-value="userToAdd.LastName" disabled="@isDisabled"/></label>
+    <br/>
+    <label>Username:<input type="text" @bind-value="userToAdd.Username" disabled="@isDisabled"/></label>
+    <br/>
+    <label>Password:<input type="password" @bind-value="userToAdd.Password" disabled="@isDisabled"/></label>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Submit"/>
+    <div class="alert alert-success mt-2" style="@display">Registration was successful!</div>
+</EditForm>
+
+@code {
+    User userToAdd { get; set; }= new User();
+    string display = "display: none";
+    bool isDisabled = false;
+
+    private void Add()
+    {
+        UserData.AddUser(userToAdd);
+        display = "display: block";
+        isDisabled = true;
+    }
+}

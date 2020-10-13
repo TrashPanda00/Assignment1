@@ -5,21 +5,22 @@
 @inject AuthenticationStateProvider AuthenticationStateProvider;
 @inject NavigationManager NavigationManager;
 
-<h1 xmlns="http://www.w3.org/1999/html">Welcome back!</h1>
 <AuthorizeView Policy="MustBeLoggedIn">
     <NotAuthorized>
+        <h1>Log in to your account</h1>
         <div class="formBlock">
-        <form @onsubmit="@PerformLogIn">
-            <label>Username:<input type="text" @bind-value="Username"/></label>
-            <br/>
-            <label>Password:<input type="password" @bind-value="Password"/></label>
-            <br/>
-            <button type="submit" class="btn btn-success">Log in</button>
-            <p style="color: red; display: inline" class="pl-2">@ErrorMessage</p>
-        </form>
+            <form @onsubmit="@PerformLogIn">
+                <label>Username:<input type="text" @bind-value="Username"/></label>
+                <br/>
+                <label>Password:<input type="password" @bind-value="Password"/></label>
+                <br/>
+                <button type="submit" class="btn btn-success">Log in</button>
+                <p style="color: red; display: inline" class="pl-2">@ErrorMessage</p>
+            </form>
         </div>
     </NotAuthorized>
     <Authorized>
+        <h1>Log out of your account</h1>
         <button @onclick="PerformLogOut" class="btn btn-success">Log out</button>
     </Authorized>
 </AuthorizeView>
