@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using FileData;
 using Models;
@@ -8,7 +8,6 @@ namespace Assignment1.Data
     public class AdultService : IAdultService
     {
         private FileContext fileContext;
-        public Statistics Statistics;
 
         public AdultService()
         {

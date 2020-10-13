@@ -8,19 +8,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="864bd38f-554e-4c37-b95a-20e5a31b2f3c" name="Default Changelist" comment="Register account">
-      <change afterPath="$PROJECT_DIR$/Assignment1/Data/Statistics.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assignment1/Pages/Charts.razor" afterDir="false" />
+    <list default="true" id="864bd38f-554e-4c37-b95a-20e5a31b2f3c" name="Default Changelist" comment="unfinished charts">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Assignment1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Assignment1.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/Index.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/LogIn.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/LogIn.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/_Host.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/_Host.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Shared/NavMenu.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/_Imports.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/_Imports.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Data/Statistics.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/Charts.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/Charts.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,17 +24,48 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/680C9D25-769E-4213-9E86-7243774C7F1F/c6/cfdfa4b8/Theme.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/88AF82DF-D459-4726-BC5E-EBB98920992D/19/NavigationManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3E1902CA-956D-4EB7-90B9-E053A7D9441E/20/ValidationAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Data/AdultService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/88AF82DF-D459-4726-BC5E-EBB98920992D/19/NavigationManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Data/AdultService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Pages/Charts.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/bogda/RiderProjects/Assignment1/Assignment1/Data/AdultService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/680C9D25-769E-4213-9E86-7243774C7F1F/c6/cfdfa4b8/Theme.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assignment1/App.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Pages/Add Adult.razor" />
-        <option value="$PROJECT_DIR$/Assignment1/Data/IAdultService.cs" />
-        <option value="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Model/Person.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Shared/MainLayout.razor" />
         <option value="$PROJECT_DIR$/Assignment1/adults.json" />
@@ -55,14 +79,16 @@
         <option value="$PROJECT_DIR$/Assignment1/Auth/CustomAuthenticationStateProvider.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Pages/Register.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Pages/LogIn.razor" />
-        <option value="$PROJECT_DIR$/Assignment1/Startup.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Program.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Pages/_Host.cshtml" />
         <option value="$PROJECT_DIR$/Assignment1/Pages/Index.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Shared/NavMenu.razor" />
         <option value="$PROJECT_DIR$/Assignment1/_Imports.razor" />
-        <option value="$PROJECT_DIR$/Assignment1/Pages/Charts.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Data/Statistics.cs" />
+        <option value="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" />
+        <option value="$PROJECT_DIR$/Assignment1/Data/IAdultService.cs" />
+        <option value="$PROJECT_DIR$/Assignment1/Startup.cs" />
+        <option value="$PROJECT_DIR$/Assignment1/Pages/Charts.razor" />
       </list>
     </option>
   </component>
@@ -126,7 +152,7 @@
       <workItem from="1602149811457" duration="681000" />
       <workItem from="1602346939386" duration="33573000" />
       <workItem from="1602509677142" duration="25491000" />
-      <workItem from="1602583910793" duration="5703000" />
+      <workItem from="1602583910793" duration="7397000" />
     </task>
     <task id="LOCAL-00001" summary="Unfinished">
       <created>1602191506173</created>
@@ -219,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602551143020</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="unfinished charts">
+      <created>1602590649828</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1602590649828</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +286,8 @@
     <MESSAGE value="Styling, cleared up unused pages, added a bunch of stuff. First stable, complete version." />
     <MESSAGE value="Minor adjustment" />
     <MESSAGE value="Register account" />
-    <option name="LAST_COMMIT_MESSAGE" value="Register account" />
+    <MESSAGE value="unfinished charts" />
+    <option name="LAST_COMMIT_MESSAGE" value="unfinished charts" />
   </component>
   <component name="WindowStateProjectService">
     <state x="960" y="275" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602434233696">
@@ -264,28 +298,28 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="0" y="23" key="DiffContextDialog/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602424900140" />
-    <state width="2517" height="165" key="GridCell.Tab.0.bottom" timestamp="1602589798751">
+    <state width="2517" height="165" key="GridCell.Tab.0.bottom" timestamp="1602591775349">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="165" key="GridCell.Tab.0.bottom/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602589798751" />
+    <state width="2517" height="165" key="GridCell.Tab.0.bottom/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602591775349" />
     <state width="1493" height="122" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
-    <state width="2517" height="165" key="GridCell.Tab.0.center" timestamp="1602589798751">
+    <state width="2517" height="165" key="GridCell.Tab.0.center" timestamp="1602591775349">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="165" key="GridCell.Tab.0.center/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602589798751" />
+    <state width="2517" height="165" key="GridCell.Tab.0.center/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602591775349" />
     <state width="1493" height="122" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
-    <state width="2517" height="165" key="GridCell.Tab.0.left" timestamp="1602589798751">
+    <state width="2517" height="165" key="GridCell.Tab.0.left" timestamp="1602591775349">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="165" key="GridCell.Tab.0.left/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602589798751" />
+    <state width="2517" height="165" key="GridCell.Tab.0.left/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602591775349" />
     <state width="1493" height="122" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
-    <state width="2517" height="165" key="GridCell.Tab.0.right" timestamp="1602589798751">
+    <state width="2517" height="165" key="GridCell.Tab.0.right" timestamp="1602591775349">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="165" key="GridCell.Tab.0.right/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602589798751" />
+    <state width="2517" height="165" key="GridCell.Tab.0.right/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602591775349" />
     <state width="1493" height="122" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
     <state width="2517" height="315" key="GridCell.Tab.1.bottom" timestamp="1602552158198">
@@ -380,16 +414,16 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1602167775192" />
-    <state x="602" y="206" key="Vcs.Push.Dialog.v2" timestamp="1602552153605">
+    <state x="602" y="206" key="Vcs.Push.Dialog.v2" timestamp="1602590708905">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="602" y="206" key="Vcs.Push.Dialog.v2/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602552153605" />
+    <state x="602" y="206" key="Vcs.Push.Dialog.v2/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602590708905" />
     <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1602191517952" />
     <state x="602" y="206" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1602350779472" />
-    <state x="92" y="92" width="2376" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602466332696">
+    <state x="92" y="92" width="2376" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602591772215">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="92" y="92" width="2376" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602466332696" />
+    <state x="92" y="92" width="2376" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602591772215" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1602175417818">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

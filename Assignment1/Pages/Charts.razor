@@ -2,7 +2,7 @@
 @using Syncfusion.Blazor
 @using Models
 @using Assignment1.Data
-@inject NavigationManager NavigationManager;
+@using Syncfusion.Blazor.PivotView
 @inject IAdultService AdultService;
 
 <h1>Charts</h1>
@@ -22,13 +22,23 @@
 
 @code {
     public static IList<Adult> adults = new List<Adult>();
+    public List<PieData1> dataSource { get; set; } = new List<PieData1>();
     public int StartAngle = 0, EndAngle = 360;
     public double ExplodeIndex = 1;
     public string OuterRadius = "70%", ExplodeRadius = "10%";
-    
+
     protected override async Task OnInitializedAsync()
     {
         adults = await AdultService.getAdult();
+        dataSource = new List<PieData1>
+        {
+            new PieData1 {xValue = "Brown", yValue = eyeColorNumber("Brown")},
+            new PieData1 {xValue = "Grey", yValue = eyeColorNumber("Grey")},
+            new PieData1 {xValue = "Green", yValue = eyeColorNumber("Green")},
+            new PieData1 {xValue = "Blue", yValue = eyeColorNumber("Blue")},
+            new PieData1 {xValue = "Amber", yValue = eyeColorNumber("Amber")},
+            new PieData1 {xValue = "Hazel", yValue = eyeColorNumber("Hazel")}
+        };
     }
 
     public class PieData1
@@ -38,15 +48,6 @@
         public string R { get; set; }
     }
 
-    private List<PieData1> dataSource = new List<PieData1>
-    {
-        new PieData1 {xValue = "Brown", yValue = eyeColorNumber("Brown")},
-        new PieData1 {xValue = "Grey", yValue = eyeColorNumber("Grey")},
-        new PieData1 {xValue = "Green", yValue = eyeColorNumber("Green")},
-        new PieData1 {xValue = "Blue", yValue = eyeColorNumber("Blue")},
-        new PieData1 {xValue = "Amber", yValue = eyeColorNumber("Amber")},
-        new PieData1 {xValue = "Hazel", yValue = eyeColorNumber("Hazel")}
-    };
 
     public static int eyeColorNumber(string eyeColor)
     {
@@ -63,27 +64,8 @@
 
     void BeforeRender(IAccLoadedEventArgs Args)
     {
-        CurrentUri = NavigationManager.Uri;
-        if (CurrentUri.IndexOf("material") > -1)
-        {
-            Args.Theme = AccumulationTheme.Material;
-        }
-        else if (CurrentUri.IndexOf("fabric") > -1)
-        {
-            Args.Theme = AccumulationTheme.Fabric;
-        }
-        else if (CurrentUri.IndexOf("bootstrap") > -1)
-        {
-            Args.Theme = AccumulationTheme.Bootstrap;
-        }
-        else if (CurrentUri.IndexOf("highcontrast") > -1)
-        {
-            Args.Theme = AccumulationTheme.HighContrast;
-        }
-        else
-        {
-            Args.Theme = AccumulationTheme.Bootstrap4;
-        }
+        Args.Theme = AccumulationTheme.Fabric;
+        StateHasChanged();
     }
 
 }

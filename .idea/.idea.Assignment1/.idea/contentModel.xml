@@ -22,7 +22,6 @@
           <e p="FileContext.cs" t="Include" />
           <e p="IAdultService.cs" t="Include" />
           <e p="IUserData.cs" t="Include" />
-          <e p="Statistics.cs" t="Include" />
         </e>
         <e p="Model" t="Include">
           <e p="Adult.cs" t="Include" />
