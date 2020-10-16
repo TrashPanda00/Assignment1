@@ -18,8 +18,15 @@ namespace Assignment1.Auth
         }
         public void AddUser(User user)
         {
-            fileContext.Users.Add(user);
-            fileContext.SaveChanges();
+            if (fileContext.Users.FirstOrDefault(u => u.Username.Equals(user.Username)) == null)
+            {
+                fileContext.Users.Add(user);
+                fileContext.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("Username is already taken!");
+            }
         }
 
         public User CheckUser(string Username, string Password)

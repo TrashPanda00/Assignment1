@@ -19,4 +19,5 @@ namespace Assignment1.Model
         [NotNull]
         public string LastName { get; set; }
     }
+    
 }

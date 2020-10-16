@@ -15,7 +15,7 @@
                 <label>Password:<input type="password" @bind-value="Password"/></label>
                 <br/>
                 <button type="submit" class="btn btn-primary">Log in</button>
-                <p style="color: red; display: inline" class="pl-2">@ErrorMessage</p>
+                <div class="alert alert-danger mt-2" style="@display">@ErrorMessage</div>
             </form>
         </div>
     </NotAuthorized>
@@ -30,20 +30,22 @@
     private string Username;
     private string Password;
     private string ErrorMessage;
+    private string display = "display: none";
 
     public async Task PerformLogIn()
     {
         ErrorMessage = "";
-        
         try
         {
             ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(Username, Password);
             NavigationManager.NavigateTo("/");
             Username = "";
             Password = "";
+            display = "display: none";
         }
         catch (Exception e)
         {
+            display = "display: block";
             ErrorMessage = e.Message;
         }
     }
