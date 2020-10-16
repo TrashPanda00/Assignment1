@@ -8,37 +8,37 @@
 
 <h1 style="font-size: 56px; font-weight: bold; color: #0B4E58">Table Data Visualized</h1>
 <div class="control-section couple">
-    <SfAccumulationChart Title="Eye Color Distribution" EnableAnimation="true">
+    <SfAccumulationChart Title="Eye Color Distribution" EnableAnimation="false">
         <AccumulationChartEvents Load="BeforeRender"/>
         <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
         <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
         <AccumulationChartSeriesCollection>
-            <AccumulationChartSeries DataSource="@dataSource" XName="xValue" YName="yValue" Name="Eye Color" Radius="@OuterRadius" StartAngle="@StartAngle" EndAngle="@EndAngle"
+            <AccumulationChartSeries DataSource="@eyeSource" XName="xValue" YName="yValue" Name="Eye Color" Radius="@OuterRadius" StartAngle="@StartAngle" EndAngle="@EndAngle"
                                      InnerRadius="0%" ExplodeIndex="@ExplodeIndex" Explode="true" ExplodeOffset="@ExplodeRadius">
                 <AccumulationDataLabelSettings Visible="false" Name="xValue" Position="AccumulationLabelPosition.Outside"></AccumulationDataLabelSettings>
             </AccumulationChartSeries>
         </AccumulationChartSeriesCollection>
     </SfAccumulationChart>
 
-    <SfAccumulationChart Title="Hair Color Distribution" EnableAnimation="true">
+    <SfAccumulationChart Title="Hair Color Distribution" EnableAnimation="false">
         <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
         <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
         <AccumulationChartSeriesCollection>
-            <AccumulationChartSeries DataSource="@dataSource2" XName="xValue" YName="yValue" Name="Hair Color" Radius="@OuterRadius" StartAngle="@StartAngle" EndAngle="@EndAngle"
+            <AccumulationChartSeries DataSource="@hairSource" XName="xValue" YName="yValue" Name="Hair Color" Radius="@OuterRadius" StartAngle="@StartAngle" EndAngle="@EndAngle"
                                      InnerRadius="0%" ExplodeIndex="@ExplodeIndex" Explode="true" ExplodeOffset="@ExplodeRadius">
                 <AccumulationDataLabelSettings Visible="false" Name="xValue" Position="AccumulationLabelPosition.Outside"></AccumulationDataLabelSettings>
             </AccumulationChartSeries>
         </AccumulationChartSeriesCollection>
     </SfAccumulationChart>
-    
+
     <SfChart Width="60%" Title="Weight by Age Chart">
         <ChartPrimaryXAxis Title="Weight" EnableTrim="false">
             <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
         </ChartPrimaryXAxis>
-         <ChartPrimaryYAxis Title="Age" EnableTrim="false">
-         </ChartPrimaryYAxis>
+        <ChartPrimaryYAxis Title="Age" EnableTrim="false">
+        </ChartPrimaryYAxis>
         <ChartSeriesCollection>
-            <ChartSeries DataSource="@dataSource3" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
+            <ChartSeries DataSource="@AgeWeightSource" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
                 <ChartMarker Visible="false" Height="10" Width="10">
                 </ChartMarker>
             </ChartSeries>
@@ -49,9 +49,9 @@
 
 @code {
     public static IList<Adult> adults = new List<Adult>();
-    public List<PieData1> dataSource { get; set; } = new List<PieData1>();
-    public List<PieData1> dataSource2 { get; set; } = new List<PieData1>();
-    public List<AgeWeight> dataSource3 { get; set; } = new List<AgeWeight>();
+    public List<PieData1> eyeSource { get; set; } = new List<PieData1>();
+    public List<PieData1> hairSource { get; set; } = new List<PieData1>();
+    public List<AgeWeight> AgeWeightSource { get; set; } = new List<AgeWeight>();
     public int StartAngle = 0, EndAngle = 360;
     public double ExplodeIndex = 1;
     public string OuterRadius = "70%", ExplodeRadius = "10%";
@@ -80,64 +80,74 @@
         }
     }
 
-    public void initAgeWeight()
-    {
-        foreach (var adult in adults)
-        {
-            dataSource3.Add(new AgeWeight(adult.Weight, adult.Age));
-        }
-    }
-
-    public static int eyeColorNumber(string eyeColor)
-    {
-        int n = 0;
-        foreach (var adult in adults)
-        {
-            if (adult.EyeColor.ToLower().Equals(eyeColor.ToLower()))
-                n++;
-        }
-        return n;
-    }
-    
-    public static int hairColorNumber(string hairColor)
-    {
-        int n = 0;
-        foreach (var adult in adults)
-        {
-            if (adult.HairColor.ToLower().Equals(hairColor.ToLower()))
-                n++;
-        }
-        return n;
-    }
-
-    string CurrentUri;
-
     void BeforeRender(IAccLoadedEventArgs Args)
     {
         Args.Theme = AccumulationTheme.Material;
-        dataSource = new List<PieData1>
+
+    //Initializing counters globally
+        int brownE = 0, greyE = 0, greenE = 0, blueE = 0, amberE = 0, hazelE = 0;
+        int blondH = 0, redH = 0, brownH = 0, blackH = 0, whiteH = 0, greyH = 0, blueH = 0, greenH = 0, leverpostejH = 0;
+    //Loop for gathering data
+        foreach (var adult in adults)
         {
-            new PieData1 {xValue = "Brown", yValue = eyeColorNumber("Brown")},
-            new PieData1 {xValue = "Grey", yValue = eyeColorNumber("Grey")},
-            new PieData1 {xValue = "Green", yValue = eyeColorNumber("Green")},
-            new PieData1 {xValue = "Blue", yValue = eyeColorNumber("Blue")},
-            new PieData1 {xValue = "Amber", yValue = eyeColorNumber("Amber")},
-            new PieData1 {xValue = "Hazel", yValue = eyeColorNumber("Hazel")}
-        };
-        dataSource2 = new List<PieData1>
+    //Setting Age-Weight
+            AgeWeightSource.Add(new AgeWeight(adult.Weight, adult.Age));
+    //Eyes
+            if (adult.EyeColor.ToLower().Equals("brown"))
+                brownE++;
+            if (adult.EyeColor.ToLower().Equals("grey"))
+                greyE++;
+            if (adult.EyeColor.ToLower().Equals("green"))
+                greenE++;
+            if (adult.EyeColor.ToLower().Equals("blue"))
+                blueE++;
+            if (adult.EyeColor.ToLower().Equals("amber"))
+                amberE++;
+            if (adult.EyeColor.ToLower().Equals("hazel"))
+                hazelE++;
+    //Hair
+            if (adult.HairColor.ToLower().Equals("blond"))
+                blondH++;
+            if (adult.HairColor.ToLower().Equals("red"))
+                redH++;
+            if (adult.HairColor.ToLower().Equals("brown"))
+                brownH++;
+            if (adult.HairColor.ToLower().Equals("black"))
+                blackH++;
+            if (adult.HairColor.ToLower().Equals("white"))
+                whiteH++;
+            if (adult.HairColor.ToLower().Equals("grey"))
+                greyH++;
+            if (adult.HairColor.ToLower().Equals("blue"))
+                blueH++;
+            if (adult.HairColor.ToLower().Equals("green"))
+                greenH++;
+            if (adult.HairColor.ToLower().Equals("leverpostej"))
+                leverpostejH++;
+        }
+    //Setting eyes and hair
+        eyeSource = new List<PieData1>
         {
-            new PieData1 {xValue = "Blond", yValue = hairColorNumber("Blond")},
-            new PieData1 {xValue = "Red", yValue = hairColorNumber("Red")},
-            new PieData1 {xValue = "Brown", yValue = hairColorNumber("Brown")},
-            new PieData1 {xValue = "Black", yValue = hairColorNumber("Black")},
-            new PieData1 {xValue = "White", yValue = hairColorNumber("White")},
-            new PieData1 {xValue = "Grey", yValue = hairColorNumber("Grey")},
-            new PieData1 {xValue = "Blue", yValue = hairColorNumber("Blue")},
-            new PieData1 {xValue = "Green", yValue = hairColorNumber("Green")},
-            new PieData1 {xValue = "Leverpostej", yValue = hairColorNumber("Leverpostej")}
+            new PieData1 {xValue = "Brown", yValue = brownE},
+            new PieData1 {xValue = "Grey", yValue = greyE},
+            new PieData1 {xValue = "Green", yValue = greenE},
+            new PieData1 {xValue = "Blue", yValue = blueE},
+            new PieData1 {xValue = "Amber", yValue = amberE},
+            new PieData1 {xValue = "Hazel", yValue = hazelE}
         };
-        initAgeWeight();
+        hairSource = new List<PieData1>
+        {
+            new PieData1 {xValue = "Blond", yValue = blondH},
+            new PieData1 {xValue = "Red", yValue = redH},
+            new PieData1 {xValue = "Brown", yValue = brownH},
+            new PieData1 {xValue = "Black", yValue = blackH},
+            new PieData1 {xValue = "White", yValue = whiteH},
+            new PieData1 {xValue = "Grey", yValue = greyH},
+            new PieData1 {xValue = "Blue", yValue = blueH},
+            new PieData1 {xValue = "Green", yValue = greenH},
+            new PieData1 {xValue = "Leverpostej", yValue = leverpostejH}
+        };
     }
-    
+
 
 }
