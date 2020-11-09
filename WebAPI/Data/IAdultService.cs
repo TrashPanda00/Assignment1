@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Models;
+using WebAPI.Model;
 
-namespace Assignment1.Data
+namespace WebAPI.Data
 {
     public interface IAdultService
     {
         public Task<IList<Adult>> getAdult();
         public Task Add(Adult newAdult);
         public Task Remove(Adult adultToRemove);
-        // public Task<int> GetCount();
+        public Task<int> GetCount();
     }
 }

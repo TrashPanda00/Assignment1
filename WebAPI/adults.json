@@ -12,116 +12,8 @@
     "Sex": "M"
   },
   {
-    "JobTitle": "Captain",
-    "Id": 2,
-    "FirstName": "Jayden",
-    "LastName": "Harrell",
-    "HairColor": "Leverpostej",
-    "EyeColor": "Brown",
-    "Age": 43,
-    "Weight": 76.6,
-    "Height": 145,
-    "Sex": "F"
-  },
-  {
-    "JobTitle": "Veterenarian",
-    "Id": 3,
-    "FirstName": "Titus",
-    "LastName": "England",
-    "HairColor": "Red",
-    "EyeColor": "Brown",
-    "Age": 45,
-    "Weight": 70.8,
-    "Height": 177,
-    "Sex": "M"
-  },
-  {
-    "JobTitle": "Personal Trainer",
-    "Id": 4,
-    "FirstName": "Zaid",
-    "LastName": "Dalton",
-    "HairColor": "Black",
-    "EyeColor": "Blue",
-    "Age": 38,
-    "Weight": 34.8,
-    "Height": 179,
-    "Sex": "M"
-  },
-  {
-    "JobTitle": "Talent Acquisition Coordinator",
-    "Id": 5,
-    "FirstName": "Ulises",
-    "LastName": "Lewis",
-    "HairColor": "Black",
-    "EyeColor": "Brown",
-    "Age": 51,
-    "Weight": 32.4,
-    "Height": 177,
-    "Sex": "M"
-  },
-  {
-    "JobTitle": "Electrical Engineer",
-    "Id": 6,
-    "FirstName": "Colt",
-    "LastName": "Lewis",
-    "HairColor": "Black",
-    "EyeColor": "Grey",
-    "Age": 42,
-    "Weight": 76.6,
-    "Height": 179,
-    "Sex": "M"
-  },
-  {
-    "JobTitle": "Front Desk Coordinator",
-    "Id": 7,
-    "FirstName": "Zaynab",
-    "LastName": "Schultz",
-    "HairColor": "Black",
-    "EyeColor": "Grey",
-    "Age": 34,
-    "Weight": 150,
-    "Height": 160,
-    "Sex": "F"
-  },
-  {
-    "JobTitle": "Aquatic Ecologist",
-    "Id": 8,
-    "FirstName": "Kaidence",
-    "LastName": "Ferguson",
-    "HairColor": "Brown",
-    "EyeColor": "Brown",
-    "Age": 37,
-    "Weight": 65.8,
-    "Height": 162,
-    "Sex": "F"
-  },
-  {
-    "JobTitle": "Casino Host",
-    "Id": 9,
-    "FirstName": "Magnus",
-    "LastName": "Rivas",
-    "HairColor": "Brown",
-    "EyeColor": "Brown",
-    "Age": 53,
-    "Weight": 67.4,
-    "Height": 171,
-    "Sex": "M"
-  },
-  {
-    "JobTitle": "Chemist",
-    "Id": 10,
-    "FirstName": "Zayne",
-    "LastName": "Douglas",
-    "HairColor": "Black",
-    "EyeColor": "Grey",
-    "Age": 48,
-    "Weight": 78.6,
-    "Height": 169,
-    "Sex": "M"
-  },
-  {
     "JobTitle": "Business Development Manager",
-    "Id": 11,
+    "Id": 2,
     "FirstName": "Mustafa",
     "LastName": "Mckay",
     "HairColor": "Black",
@@ -132,32 +24,8 @@
     "Sex": "M"
   },
   {
-    "JobTitle": "Hairdresser",
-    "Id": 12,
-    "FirstName": "Landry",
-    "LastName": "Armstrong",
-    "HairColor": "Brown",
-    "EyeColor": "Blue",
-    "Age": 58,
-    "Weight": 116.6,
-    "Height": 173,
-    "Sex": "M"
-  },
-  {
-    "JobTitle": "Meeting Planner",
-    "Id": 13,
-    "FirstName": "Jace",
-    "LastName": "Orr",
-    "HairColor": "Green",
-    "EyeColor": "Grey",
-    "Age": 51,
-    "Weight": 71.4,
-    "Height": 171,
-    "Sex": "M"
-  },
-  {
     "JobTitle": "Gardener",
-    "Id": 14,
+    "Id": 3,
     "FirstName": "Kehlani",
     "LastName": "Hernandez",
     "HairColor": "Black",
@@ -169,7 +37,7 @@
   },
   {
     "JobTitle": "ITManager",
-    "Id": 15,
+    "Id": 4,
     "FirstName": "Skylah",
     "LastName": "Hernandez",
     "HairColor": "Brown",
@@ -181,7 +49,7 @@
   },
   {
     "JobTitle": "Business Reporter",
-    "Id": 16,
+    "Id": 5,
     "FirstName": "Estefania",
     "LastName": "Harper",
     "HairColor": "Black",
@@ -193,7 +61,7 @@
   },
   {
     "JobTitle": "Producer",
-    "Id": 17,
+    "Id": 6,
     "FirstName": "Evangeline",
     "LastName": "Harvey",
     "HairColor": "Black",
@@ -205,7 +73,7 @@
   },
   {
     "JobTitle": "Factory Worker",
-    "Id": 18,
+    "Id": 7,
     "FirstName": "Kailey",
     "LastName": "Phelps",
     "HairColor": "Black",
@@ -217,7 +85,7 @@
   },
   {
     "JobTitle": "Dietitian",
-    "Id": 19,
+    "Id": 8,
     "FirstName": "Rayne",
     "LastName": "Kirby",
     "HairColor": "Black",
@@ -229,7 +97,7 @@
   },
   {
     "JobTitle": "Human Resources Director",
-    "Id": 20,
+    "Id": 9,
     "FirstName": "Izayah",
     "LastName": "Fischer",
     "HairColor": "Black",
@@ -241,7 +109,7 @@
   },
   {
     "JobTitle": "Superintendent",
-    "Id": 21,
+    "Id": 10,
     "FirstName": "Siddharth",
     "LastName": "Perkins",
     "HairColor": "Black",
@@ -253,7 +121,7 @@
   },
   {
     "JobTitle": "Civil Engineer",
-    "Id": 22,
+    "Id": 11,
     "FirstName": "Dayra",
     "LastName": "Perkins",
     "HairColor": "Black",
@@ -265,7 +133,7 @@
   },
   {
     "JobTitle": "Nail Technician",
-    "Id": 23,
+    "Id": 12,
     "FirstName": "Remi",
     "LastName": "Holmes",
     "HairColor": "Black",
@@ -277,7 +145,7 @@
   },
   {
     "JobTitle": "Barber",
-    "Id": 24,
+    "Id": 13,
     "FirstName": "Coleman",
     "LastName": "Zimmerman",
     "HairColor": "Brown",
@@ -289,7 +157,7 @@
   },
   {
     "JobTitle": "Makeup Artist",
-    "Id": 25,
+    "Id": 14,
     "FirstName": "Navya",
     "LastName": "Anderson",
     "HairColor": "Black",
@@ -301,7 +169,7 @@
   },
   {
     "JobTitle": "Office Manager",
-    "Id": 26,
+    "Id": 15,
     "FirstName": "Lily",
     "LastName": "Mendez",
     "HairColor": "Black",
@@ -313,7 +181,7 @@
   },
   {
     "JobTitle": "Dietitian",
-    "Id": 27,
+    "Id": 16,
     "FirstName": "Kareem",
     "LastName": "Carrillo",
     "HairColor": "Brown",
@@ -325,7 +193,7 @@
   },
   {
     "JobTitle": "Tutor",
-    "Id": 28,
+    "Id": 17,
     "FirstName": "Rishi",
     "LastName": "Harris",
     "HairColor": "Black",
@@ -337,7 +205,7 @@
   },
   {
     "JobTitle": "Actuary",
-    "Id": 29,
+    "Id": 18,
     "FirstName": "Elisha",
     "LastName": "Patrick",
     "HairColor": "Black",
@@ -349,7 +217,7 @@
   },
   {
     "JobTitle": "Biological Engineer",
-    "Id": 30,
+    "Id": 19,
     "FirstName": "Cristiano",
     "LastName": "Robertson",
     "HairColor": "Black",
@@ -361,7 +229,7 @@
   },
   {
     "JobTitle": "Financial Services Representative",
-    "Id": 31,
+    "Id": 20,
     "FirstName": "Lucien",
     "LastName": "Robertson",
     "HairColor": "Black",
@@ -373,7 +241,7 @@
   },
   {
     "JobTitle": "Pilot",
-    "Id": 32,
+    "Id": 21,
     "FirstName": "Dario",
     "LastName": "Foley",
     "HairColor": "Black",
@@ -385,7 +253,7 @@
   },
   {
     "JobTitle": "Math Teacher",
-    "Id": 33,
+    "Id": 22,
     "FirstName": "Kamari",
     "LastName": "Edwards",
     "HairColor": "Brown",
@@ -397,7 +265,7 @@
   },
   {
     "JobTitle": "Front End Web Developer",
-    "Id": 34,
+    "Id": 23,
     "FirstName": "Eimy",
     "LastName": "Michael",
     "HairColor": "Black",
@@ -409,7 +277,7 @@
   },
   {
     "JobTitle": "Product Engineer",
-    "Id": 35,
+    "Id": 24,
     "FirstName": "Jaelyn",
     "LastName": "Olsen",
     "HairColor": "Brown",
@@ -421,7 +289,7 @@
   },
   {
     "JobTitle": "Retail Sales Associate",
-    "Id": 36,
+    "Id": 25,
     "FirstName": "Angelo",
     "LastName": "Olsen",
     "HairColor": "Black",
@@ -433,7 +301,7 @@
   },
   {
     "JobTitle": "Wedding Stylist",
-    "Id": 37,
+    "Id": 26,
     "FirstName": "Caden",
     "LastName": "Dudley",
     "HairColor": "Black",
@@ -445,7 +313,7 @@
   },
   {
     "JobTitle": "Floral Designer",
-    "Id": 38,
+    "Id": 27,
     "FirstName": "Natalee",
     "LastName": "Gay",
     "HairColor": "Brown",
@@ -457,7 +325,7 @@
   },
   {
     "JobTitle": "Nail Technician",
-    "Id": 39,
+    "Id": 28,
     "FirstName": "Lux",
     "LastName": "Reeves",
     "HairColor": "Leverpostej",
@@ -469,7 +337,7 @@
   },
   {
     "JobTitle": "Graphic Designer",
-    "Id": 40,
+    "Id": 29,
     "FirstName": "Ashlyn",
     "LastName": "Reeves",
     "HairColor": "Black",
@@ -481,7 +349,7 @@
   },
   {
     "JobTitle": "Painter",
-    "Id": 41,
+    "Id": 30,
     "FirstName": "Mikael",
     "LastName": "Mejia",
     "HairColor": "Black",
@@ -493,7 +361,7 @@
   },
   {
     "JobTitle": "Housekeeper",
-    "Id": 42,
+    "Id": 31,
     "FirstName": "Harlow",
     "LastName": "Wang",
     "HairColor": "Brown",
@@ -505,7 +373,7 @@
   },
   {
     "JobTitle": "Database Manager",
-    "Id": 43,
+    "Id": 32,
     "FirstName": "Bogdan",
     "LastName": "Mezei",
     "HairColor": "Brown",
@@ -513,6 +381,30 @@
     "Age": 20,
     "Weight": 75,
     "Height": 190,
+    "Sex": "M"
+  },
+  {
+    "JobTitle": "Captain",
+    "Id": 33,
+    "FirstName": "Mihai",
+    "LastName": "Palinca",
+    "HairColor": "brown",
+    "EyeColor": "blue",
+    "Age": 43,
+    "Weight": 78,
+    "Height": 78,
+    "Sex": "M"
+  },
+  {
+    "JobTitle": "Database Manager",
+    "Id": 34,
+    "FirstName": "AAAAAAAAA",
+    "LastName": "AAAAAAAAAA",
+    "HairColor": "brown",
+    "EyeColor": "brown",
+    "Age": 76,
+    "Weight": 76,
+    "Height": 76,
     "Sex": "M"
   }
 ]

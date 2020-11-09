@@ -7,7 +7,6 @@
     <e p="C:\Users\bogda\RiderProjects\Assignment1" t="IncludeFlat">
       <e p="Assignment1" t="IncludeRecursive">
         <e p="_Imports.razor" t="Include" />
-        <e p="adults.json" t="Include" />
         <e p="App.razor" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
@@ -56,7 +55,6 @@
           <e p="SurveyPrompt.razor" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
-        <e p="users.json" t="Include" />
         <e p="wwwroot" t="Include">
           <e p="css" t="Include">
             <e p="bootstrap" t="Include">
@@ -87,6 +85,42 @@
       </e>
       <e p="Assignment1.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="WebAPI" t="IncludeRecursive">
+        <e p="adults.json" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="AdultController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include">
+          <e p="AdultService.cs" t="Include" />
+          <e p="FileContext.cs" t="Include" />
+          <e p="IAdultService.cs" t="Include" />
+          <e p="IUserData.cs" t="Include" />
+          <e p="UserData.cs" t="Include" />
+        </e>
+        <e p="Model" t="Include">
+          <e p="Adult.cs" t="Include" />
+          <e p="Person.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="WebAPI.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="users.json" t="Include" />
+        <e p="WebAPI.csproj" t="IncludeRecursive" />
+      </e>
     </e>
   </component>
 </project>

@@ -1,48 +1,58 @@
-﻿﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using FileData;
+using Microsoft.AspNetCore.Mvc;
 using Models;
+using Newtonsoft.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Assignment1.Data
 {
     public class AdultService : IAdultService
     {
-        private FileContext fileContext;
+        private const string uri = "http://localhost:5000";
 
         public AdultService()
         {
-            fileContext = new FileContext();
+            
         }
 
-        public Task<IList<Adult>> getAdult()
+        public async Task<IList<Adult>> getAdult()
         {
-            return Task.FromResult(fileContext.Adults);
-        }
+            IList<Adult> result;
 
-        public void Add(Adult newAdult)
-        {
-            fileContext.Adults.Add(newAdult);
-            fileContext.SaveChanges();
-        }
-
-        public void Remove(Adult adultToRemove)
-        {
-            fileContext.Adults.Remove(adultToRemove);
-            ReassignIds();
-            fileContext.SaveChanges();
-        }
-
-        public int GetCount()
-        {
-            return fileContext.Adults.Count;
-        }
-
-        private void ReassignIds()
-        {
-            for (int i = 0; i < GetCount(); i++)
+            using (var client = new System.Net.Http.HttpClient())
             {
-                fileContext.Adults[i].Id = i+1;
+                client.BaseAddress = new Uri(uri+"/adult");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add
+                    (new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var response = client.GetAsync(uri+"/adult").Result;
+                var data = response.Content.ReadAsStringAsync().Result;
+                result = JsonConvert.DeserializeObject<IList<Adult>>(data);
             }
+            return result;
         }
+
+        public async Task Add(Adult newAdult)
+        {
+            HttpClient client = new HttpClient();
+            string adultAsJson = JsonSerializer.Serialize(newAdult);
+            HttpContent content = new StringContent(
+                adultAsJson,
+                Encoding.UTF8,
+                "application/json");
+            await client.PostAsync(uri + "/adult", content);
+        }
+
+        public async Task Remove(Adult adultToRemove)
+        {
+            HttpClient client = new HttpClient();
+            await client.DeleteAsync(uri+"/"+adultToRemove.Id);
+        }
+        
     }
 }

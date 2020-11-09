@@ -35,6 +35,7 @@
         try
         {
             UserData.AddUser(userToAdd);
+            UserData.checkUsername(userToAdd);
             displayError = "display: none";
             display = "display: block";
             isDisabled = true;

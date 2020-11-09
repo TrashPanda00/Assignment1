@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿﻿using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text.Json;
@@ -44,7 +44,7 @@ public class CustomAuthenticationStateProvider : AuthenticationStateProvider {
 
         ClaimsIdentity identity = new ClaimsIdentity();
         try {
-            User user = userData.CheckUser(username, password);
+            User user = userData.CheckUser(username, password).Result;
             identity = SetupClaimsForUser(user);
             string serialisedData = JsonSerializer.Serialize(user);
             jsRuntime.InvokeVoidAsync("sessionStorage.setItem", "currentUser", serialisedData);

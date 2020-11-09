@@ -55,9 +55,10 @@
     public bool isBtnDisabled = true;
     public string display = "display: none";
 
-    public void Add()
+    public async Task Add()
     {
-        adultToAdd.Id = AdultService.GetCount() + 1;
+        IList<Adult> adults = await AdultService.getAdult();
+        adultToAdd.Id = adults.Count + 1;
         AdultService.Add(adultToAdd);
         isDisabled = true;
         isBtnDisabled = false;
