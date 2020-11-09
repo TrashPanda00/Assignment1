@@ -18,7 +18,6 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Data" t="Include">
           <e p="AdultService.cs" t="Include" />
-          <e p="FileContext.cs" t="Include" />
           <e p="IAdultService.cs" t="Include" />
           <e p="IUserData.cs" t="Include" />
         </e>
@@ -39,7 +38,6 @@
           <e p="_Host.cshtml" t="Include" />
           <e p="AddAdult.razor" t="Include" />
           <e p="Charts.razor" t="Include" />
-          <e p="Error.cshtml" t="Include" />
           <e p="Index.razor" t="Include" />
           <e p="LogIn.razor" t="Include" />
           <e p="Register.razor" t="Include" />

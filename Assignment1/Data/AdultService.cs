@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using FileData;
-using Microsoft.AspNetCore.Mvc;
 using Models;
 using Newtonsoft.Json;
 using JsonSerializer = System.Text.Json.JsonSerializer;
@@ -15,16 +13,11 @@ namespace Assignment1.Data
     {
         private const string uri = "http://localhost:5000";
 
-        public AdultService()
-        {
-            
-        }
-
         public async Task<IList<Adult>> getAdult()
         {
             IList<Adult> result;
 
-            using (var client = new System.Net.Http.HttpClient())
+            using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(uri+"/adult");
                 client.DefaultRequestHeaders.Accept.Clear();

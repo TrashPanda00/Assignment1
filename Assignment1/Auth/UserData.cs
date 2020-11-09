@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Assignment1.Data;
 using Assignment1.Model;
-using FileData;
 using Newtonsoft.Json;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
@@ -15,12 +14,7 @@ namespace Assignment1.Auth
     public class UserData : IUserData
     {
         private const string uri = "http://localhost:5000";
-
-
-        public UserData()
-        {
-        }
-
+        
         public async Task AddUser(User newUser)
         {
             IList<User> users = await getUsers();
@@ -67,7 +61,7 @@ namespace Assignment1.Auth
         {
             IList<User> result;
 
-            using (var client = new System.Net.Http.HttpClient())
+            using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(uri + "/user");
                 client.DefaultRequestHeaders.Accept.Clear();
