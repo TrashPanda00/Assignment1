@@ -9,21 +9,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="864bd38f-554e-4c37-b95a-20e5a31b2f3c" name="Default Changelist" comment="Done">
-      <change beforePath="$PROJECT_DIR$/Assignment1/Auth/CustomAuthenticationStateProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Auth/CustomAuthenticationStateProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Auth/UserData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Auth/UserData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Data/FileContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Data/IAdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Data/IAdultService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Model/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Model/Person.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Model/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Model/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/Charts.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/Charts.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/Error.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/Register.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/Register.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/ViewAdults.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/ViewAdults.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Shared/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Shared/MainLayout.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Startup.cs" afterDir="false" />
+    <list default="true" id="864bd38f-554e-4c37-b95a-20e5a31b2f3c" name="Default Changelist" comment="Cleared up code">
+      <change beforePath="$PROJECT_DIR$/WebAPI/Data/AdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Data/AdultService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Data/IAdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Data/IAdultService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +45,6 @@
         <option value="$PROJECT_DIR$/WebAPI/Model/User.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Data/FileContext.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Startup.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Data/IAdultService.cs" />
         <option value="$PROJECT_DIR$/WebAPI/WeatherForecast.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/WebAPI/Data/IUserData.cs" />
@@ -66,7 +53,6 @@
         <option value="$PROJECT_DIR$/Assignment1/Data/IUserData.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/WebAPI/Controllers/AdultController.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Data/AdultService.cs" />
         <option value="$PROJECT_DIR$/WebAPI/adults.json" />
         <option value="$PROJECT_DIR$/Assignment1/Data/FileContext.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Data/IAdultService.cs" />
@@ -82,6 +68,8 @@
         <option value="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Auth/UserData.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Auth/CustomAuthenticationStateProvider.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Data/IAdultService.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Data/AdultService.cs" />
       </list>
     </option>
   </component>
@@ -102,7 +90,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Assignment1">
+  <component name="RunManager" selected=".NET Launch Settings Profile.WebAPI">
     <configuration name="Assignment1" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Assignment1/Assignment1.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
@@ -184,7 +172,7 @@
       <workItem from="1604498744731" duration="1892000" />
       <workItem from="1604761077755" duration="10151000" />
       <workItem from="1604860814342" duration="15787000" />
-      <workItem from="1604934963366" duration="3031000" />
+      <workItem from="1604934963366" duration="3507000" />
     </task>
     <task id="LOCAL-00001" summary="Unfinished">
       <created>1602191506173</created>
@@ -368,7 +356,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604937711551</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Cleared up code">
+      <created>1604938105484</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1604938105484</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Cleared up code">
+      <created>1604938118972</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1604938118972</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +447,8 @@
     <MESSAGE value="Mostly done, delete does not work for some reason" />
     <MESSAGE value="Delete works, problem with unique ids" />
     <MESSAGE value="Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done" />
+    <MESSAGE value="Cleared up code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleared up code" />
   </component>
   <component name="WindowStateProjectService">
     <state x="960" y="275" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602434233696">
@@ -456,28 +459,28 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="0" y="23" width="2048" height="892" key="DiffContextDialog/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602862047105" />
-    <state width="2517" height="220" key="GridCell.Tab.0.bottom" timestamp="1604937645425">
+    <state width="2517" height="220" key="GridCell.Tab.0.bottom" timestamp="1604938470824">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="220" key="GridCell.Tab.0.bottom/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604937645425" />
+    <state width="2517" height="220" key="GridCell.Tab.0.bottom/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604938470824" />
     <state width="1493" height="122" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
-    <state width="2517" height="220" key="GridCell.Tab.0.center" timestamp="1604937645425">
+    <state width="2517" height="220" key="GridCell.Tab.0.center" timestamp="1604938470824">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="220" key="GridCell.Tab.0.center/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604937645425" />
+    <state width="2517" height="220" key="GridCell.Tab.0.center/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604938470824" />
     <state width="1493" height="122" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
-    <state width="2517" height="220" key="GridCell.Tab.0.left" timestamp="1604937645425">
+    <state width="2517" height="220" key="GridCell.Tab.0.left" timestamp="1604938470824">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="220" key="GridCell.Tab.0.left/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604937645425" />
+    <state width="2517" height="220" key="GridCell.Tab.0.left/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604938470824" />
     <state width="1493" height="122" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
-    <state width="2517" height="220" key="GridCell.Tab.0.right" timestamp="1604937645425">
+    <state width="2517" height="220" key="GridCell.Tab.0.right" timestamp="1604938470824">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="220" key="GridCell.Tab.0.right/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604937645425" />
+    <state width="2517" height="220" key="GridCell.Tab.0.right/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604938470824" />
     <state width="1493" height="122" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
     <state width="2517" height="315" key="GridCell.Tab.1.bottom" timestamp="1602552158198">
@@ -573,10 +576,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1602167775192" />
-    <state x="602" y="206" key="Vcs.Push.Dialog.v2" timestamp="1604937717592">
+    <state x="602" y="206" key="Vcs.Push.Dialog.v2" timestamp="1604938124536">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="602" y="206" key="Vcs.Push.Dialog.v2/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604937717592" />
+    <state x="602" y="206" key="Vcs.Push.Dialog.v2/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604938124536" />
     <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1602191517952" />
     <state x="602" y="206" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1602350779472" />
     <state x="1143" y="276" key="VcsDiffUtil.ChangesDialog" timestamp="1602862003185">

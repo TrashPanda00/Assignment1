@@ -9,6 +9,5 @@ namespace WebAPI.Data
         public Task<IList<Adult>> getAdult();
         public Task Add(Adult newAdult);
         public Task Remove(Adult adultToRemove);
-        public Task<int> GetCount();
     }
 }

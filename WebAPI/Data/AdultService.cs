@@ -29,11 +29,5 @@ namespace WebAPI.Data
             fileContext.Adults.Remove(adultToRemove);
             fileContext.SaveChanges();
         }
-
-        public async Task<int> GetCount()
-        {
-            return fileContext.Adults.Count;
-        }
-        
     }
 }

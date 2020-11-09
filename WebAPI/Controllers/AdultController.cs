@@ -41,13 +41,13 @@ namespace WebAPI.Controllers
             try
             {
                 IList<Adult> adults = await adultService.getAdult();
-                Adult adult = adults.FirstOrDefault(adult => adult.Id == id);
+                Adult adult = adults.First(adult => adult.Id == id);
                 return Ok(adult);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                return StatusCode(500, e.Message);
+                return StatusCode(404, "ERROR 404: Adult not found.");
             }
         }
 
@@ -78,14 +78,14 @@ namespace WebAPI.Controllers
             try
             {
                 IList<Adult> adults = await adultService.getAdult();
-                Adult adultToRemove = adults.FirstOrDefault(adult => adult.Id == Id);
+                Adult adultToRemove = adults.First(adult => adult.Id == Id);
                 await adultService.Remove(adultToRemove);
                 return Ok(adultToRemove);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                return StatusCode(500, e.Message);
+                return StatusCode(404, e.Message);
             }
         }
     }
