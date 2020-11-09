@@ -35,7 +35,7 @@ namespace WebAPI.Controllers
         }
         
         [HttpPost]
-        public async Task<ActionResult<Adult>> Add([FromBody] User user)
+        public async Task<ActionResult<User>> Add([FromBody] User user)
         {
             if (!ModelState.IsValid)
             {
