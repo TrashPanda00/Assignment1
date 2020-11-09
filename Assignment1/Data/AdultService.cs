@@ -51,7 +51,7 @@ namespace Assignment1.Data
         public async Task Remove(Adult adultToRemove)
         {
             HttpClient client = new HttpClient();
-            await client.DeleteAsync(uri+"/"+adultToRemove.Id);
+            await client.DeleteAsync(uri+"/adult/"+adultToRemove.Id);
         }
         
     }

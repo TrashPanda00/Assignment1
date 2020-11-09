@@ -27,7 +27,6 @@ namespace WebAPI.Data
         public async Task Remove(Adult adultToRemove)
         {
             fileContext.Adults.Remove(adultToRemove);
-            ReassignIds();
             fileContext.SaveChanges();
         }
 
@@ -35,13 +34,6 @@ namespace WebAPI.Data
         {
             return fileContext.Adults.Count;
         }
-
-        private void ReassignIds()
-        {
-            for (int i = 0; i < GetCount().Result; i++)
-            {
-                fileContext.Adults[i].Id = i+1;
-            }
-        }
+        
     }
 }

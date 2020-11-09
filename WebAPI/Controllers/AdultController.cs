@@ -33,6 +33,23 @@ namespace WebAPI.Controllers
                 return StatusCode(500, e.Message);
             }
         }
+        
+        [HttpGet]
+        [Route("{id:int}")]
+        public async Task<ActionResult<Adult>> GetAdult([FromRoute] int id)
+        {
+            try
+            {
+                IList<Adult> adults = await adultService.getAdult();
+                Adult adult = adults.FirstOrDefault(adult => adult.Id == id);
+                return Ok(adult);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
+        }
 
         [HttpPost]
         public async Task<ActionResult<Adult>> Add([FromBody] Adult adult)
@@ -56,7 +73,7 @@ namespace WebAPI.Controllers
 
         [HttpDelete]
         [Route("{id:int}")]
-        public async Task<ActionResult<Adult>> Remove([FromRoute] int Id)
+        public async Task<ActionResult> Remove([FromRoute] int Id)
         {
             try
             {

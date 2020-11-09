@@ -9,38 +9,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="864bd38f-554e-4c37-b95a-20e5a31b2f3c" name="Default Changelist" comment="Added username duplicate checking when registering and fixed styling inconsistencies">
-      <change afterPath="$PROJECT_DIR$/WebAPI/Controllers/AdultController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Controllers/UserController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Data/AdultService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Data/FileContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Data/IAdultService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Data/IUserData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Data/UserData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Model/Adult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Model/Person.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Model/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="864bd38f-554e-4c37-b95a-20e5a31b2f3c" name="Default Changelist" comment="Mostly done, delete does not work for some reason">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Auth/CustomAuthenticationStateProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Auth/CustomAuthenticationStateProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Auth/UserData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Auth/UserData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Data/IAdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Data/IAdultService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Data/IUserData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Data/IUserData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/AddAdult.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/AddAdult.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/Register.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/Register.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/_Imports.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/_Imports.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/adults.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/adults.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/users.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/AdultController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/AdultController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Data/AdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Data/AdultService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/adults.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/adults.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,20 +58,21 @@
         <option value="$PROJECT_DIR$/WebAPI/Startup.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Data/IAdultService.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Auth/CustomAuthenticationStateProvider.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Data/AdultService.cs" />
         <option value="$PROJECT_DIR$/WebAPI/WeatherForecast.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/WebAPI/Data/IUserData.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Data/IAdultService.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Pages/AddAdult.razor" />
         <option value="$PROJECT_DIR$/WebAPI/Controllers/UserController.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/WebAPI/Data/UserData.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Auth/UserData.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Data/IUserData.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Pages/Register.razor" />
-        <option value="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/WebAPI/Controllers/AdultController.cs" />
+        <option value="$PROJECT_DIR$/Assignment1/Data/AdultService.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Data/AdultService.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/adults.json" />
       </list>
     </option>
   </component>
@@ -118,7 +93,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Assignment1">
+  <component name="RunManager" selected=".NET Launch Settings Profile.WebAPI">
     <configuration name="Assignment1" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Assignment1/Assignment1.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
@@ -199,7 +174,7 @@
       <workItem from="1604242045253" duration="1469000" />
       <workItem from="1604498744731" duration="1892000" />
       <workItem from="1604761077755" duration="10151000" />
-      <workItem from="1604860814342" duration="12380000" />
+      <workItem from="1604860814342" duration="15170000" />
     </task>
     <task id="LOCAL-00001" summary="Unfinished">
       <created>1602191506173</created>
@@ -362,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602861970574</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Mostly done, delete does not work for some reason">
+      <created>1604890308981</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1604890308981</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +418,8 @@
     <MESSAGE value="Final Version" />
     <MESSAGE value="Massively improved chart performence" />
     <MESSAGE value="Added username duplicate checking when registering and fixed styling inconsistencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added username duplicate checking when registering and fixed styling inconsistencies" />
+    <MESSAGE value="Mostly done, delete does not work for some reason" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mostly done, delete does not work for some reason" />
   </component>
   <component name="WindowStateProjectService">
     <state x="960" y="275" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602434233696">
@@ -447,28 +430,28 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="0" y="23" width="2048" height="892" key="DiffContextDialog/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602862047105" />
-    <state width="2517" height="166" key="GridCell.Tab.0.bottom" timestamp="1604889974147">
+    <state width="2517" height="220" key="GridCell.Tab.0.bottom" timestamp="1604892777175">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="166" key="GridCell.Tab.0.bottom/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604889974147" />
+    <state width="2517" height="220" key="GridCell.Tab.0.bottom/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604892777175" />
     <state width="1493" height="122" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
-    <state width="2517" height="166" key="GridCell.Tab.0.center" timestamp="1604889974147">
+    <state width="2517" height="220" key="GridCell.Tab.0.center" timestamp="1604892777175">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="166" key="GridCell.Tab.0.center/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604889974147" />
+    <state width="2517" height="220" key="GridCell.Tab.0.center/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604892777175" />
     <state width="1493" height="122" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
-    <state width="2517" height="166" key="GridCell.Tab.0.left" timestamp="1604889974147">
+    <state width="2517" height="220" key="GridCell.Tab.0.left" timestamp="1604892777175">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="166" key="GridCell.Tab.0.left/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604889974147" />
+    <state width="2517" height="220" key="GridCell.Tab.0.left/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604892777175" />
     <state width="1493" height="122" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
-    <state width="2517" height="166" key="GridCell.Tab.0.right" timestamp="1604889974147">
+    <state width="2517" height="220" key="GridCell.Tab.0.right" timestamp="1604892777175">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state width="2517" height="166" key="GridCell.Tab.0.right/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604889974147" />
+    <state width="2517" height="220" key="GridCell.Tab.0.right/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604892777175" />
     <state width="1493" height="122" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1602191523912" />
     <state width="2517" height="164" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1602349767590" />
     <state width="2517" height="315" key="GridCell.Tab.1.bottom" timestamp="1602552158198">
@@ -564,10 +547,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1602167775192" />
-    <state x="602" y="206" key="Vcs.Push.Dialog.v2" timestamp="1602861974397">
+    <state x="602" y="206" key="Vcs.Push.Dialog.v2" timestamp="1604890322031">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="602" y="206" key="Vcs.Push.Dialog.v2/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1602861974397" />
+    <state x="602" y="206" key="Vcs.Push.Dialog.v2/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604890322031" />
     <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1602191517952" />
     <state x="602" y="206" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1602350779472" />
     <state x="1143" y="276" key="VcsDiffUtil.ChangesDialog" timestamp="1602862003185">
