@@ -145,7 +145,7 @@ else
 @code {
     private IList<Adult> adults;
     private string searchFilter = "";
-    private bool isSortedAscending = true;
+    private bool isSortedAscending = false;
     private string activeSortColumn = "Id";
     private int searchType = 1;
 
@@ -153,6 +153,8 @@ else
     protected override async Task OnInitializedAsync()
     {
         adults = await AdultService.getAdult();
+        SortTable("Id");
+        StateHasChanged();
     }
 
     private async Task FilterChangedAsync(ChangeEventArgs args)

@@ -58,7 +58,19 @@
     public async Task Add()
     {
         IList<Adult> adults = await AdultService.getAdult();
-        adultToAdd.Id = adults.Count + 1;
+        int count = 0;
+        while (true)
+        {
+            if (adults.Any(adult => adult.Id == count))
+            {
+                count++;
+            }
+            else
+            {
+                adultToAdd.Id = count;
+                break;
+            }
+        }
         AdultService.Add(adultToAdd);
         isDisabled = true;
         isBtnDisabled = false;
