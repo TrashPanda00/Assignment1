@@ -46,8 +46,8 @@
 
 @code {
     public static IList<Adult> adults = new List<Adult>();
-    public List<PieData1> eyeSource { get; set; } = new List<PieData1>();
-    public List<PieData1> hairSource { get; set; } = new List<PieData1>();
+    public List<PieData> eyeSource { get; set; } = new List<PieData>();
+    public List<PieData> hairSource { get; set; } = new List<PieData>();
     public List<AgeWeight> AgeWeightSource { get; set; } = new List<AgeWeight>();
     public int StartAngle = 0, EndAngle = 360;
     public double ExplodeIndex = 1;
@@ -58,7 +58,7 @@
         adults = await AdultService.getAdult();
     }
 
-    public class PieData1
+    public class PieData
     {
         public string xValue { get; set; }
         public double yValue { get; set; }
@@ -77,7 +77,7 @@
         }
     }
 
-    void BeforeRender(IAccLoadedEventArgs Args)
+    public void BeforeRender(IAccLoadedEventArgs Args)
     {
         Args.Theme = AccumulationTheme.Material;
 
@@ -123,26 +123,26 @@
                 leverpostejH++;
         }
     //Setting eyes and hair
-        eyeSource = new List<PieData1>
+        eyeSource = new List<PieData>
         {
-            new PieData1 {xValue = "Brown", yValue = brownE},
-            new PieData1 {xValue = "Grey", yValue = greyE},
-            new PieData1 {xValue = "Green", yValue = greenE},
-            new PieData1 {xValue = "Blue", yValue = blueE},
-            new PieData1 {xValue = "Amber", yValue = amberE},
-            new PieData1 {xValue = "Hazel", yValue = hazelE}
+            new PieData {xValue = "Brown", yValue = brownE},
+            new PieData {xValue = "Grey", yValue = greyE},
+            new PieData {xValue = "Green", yValue = greenE},
+            new PieData {xValue = "Blue", yValue = blueE},
+            new PieData {xValue = "Amber", yValue = amberE},
+            new PieData {xValue = "Hazel", yValue = hazelE}
         };
-        hairSource = new List<PieData1>
+        hairSource = new List<PieData>
         {
-            new PieData1 {xValue = "Blond", yValue = blondH},
-            new PieData1 {xValue = "Red", yValue = redH},
-            new PieData1 {xValue = "Brown", yValue = brownH},
-            new PieData1 {xValue = "Black", yValue = blackH},
-            new PieData1 {xValue = "White", yValue = whiteH},
-            new PieData1 {xValue = "Grey", yValue = greyH},
-            new PieData1 {xValue = "Blue", yValue = blueH},
-            new PieData1 {xValue = "Green", yValue = greenH},
-            new PieData1 {xValue = "Leverpostej", yValue = leverpostejH}
+            new PieData {xValue = "Blond", yValue = blondH},
+            new PieData {xValue = "Red", yValue = redH},
+            new PieData {xValue = "Brown", yValue = brownH},
+            new PieData {xValue = "Black", yValue = blackH},
+            new PieData {xValue = "White", yValue = whiteH},
+            new PieData {xValue = "Grey", yValue = greyH},
+            new PieData {xValue = "Blue", yValue = blueH},
+            new PieData {xValue = "Green", yValue = greenH},
+            new PieData {xValue = "Leverpostej", yValue = leverpostejH}
         };
     }
 

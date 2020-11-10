@@ -9,8 +9,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="864bd38f-554e-4c37-b95a-20e5a31b2f3c" name="Default Changelist" comment="Added errors in api">
+    <list default="true" id="864bd38f-554e-4c37-b95a-20e5a31b2f3c" name="Default Changelist" comment="minor fix">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/Pages/Charts.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Pages/Charts.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +41,6 @@
         <option value="$PROJECT_DIR$/Assignment1/Pages/LogIn.razor" />
         <option value="$PROJECT_DIR$/Assignment1/users.json" />
         <option value="$PROJECT_DIR$/Assignment1/_Imports.razor" />
-        <option value="$PROJECT_DIR$/WebAPI/Model/Adult.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Model/Person.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Model/User.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Data/FileContext.cs" />
@@ -48,7 +48,6 @@
         <option value="$PROJECT_DIR$/WebAPI/WeatherForecast.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/WebAPI/Data/IUserData.cs" />
-        <option value="$PROJECT_DIR$/WebAPI/Controllers/UserController.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Data/UserData.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Data/IUserData.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Properties/launchSettings.json" />
@@ -60,7 +59,6 @@
         <option value="$PROJECT_DIR$/Assignment1/Shared/MainLayout.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Pages/ViewAdults.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Pages/Register.razor" />
-        <option value="$PROJECT_DIR$/Assignment1/Pages/Charts.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Pages/AddAdult.razor" />
         <option value="$PROJECT_DIR$/Assignment1/Model/User.cs" />
         <option value="$PROJECT_DIR$/Assignment1/Model/Person.cs" />
@@ -70,6 +68,9 @@
         <option value="$PROJECT_DIR$/WebAPI/Data/IAdultService.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Data/AdultService.cs" />
         <option value="$PROJECT_DIR$/WebAPI/Controllers/AdultController.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Controllers/UserController.cs" />
+        <option value="$PROJECT_DIR$/WebAPI/Model/Adult.cs" />
+        <option value="$PROJECT_DIR$/Assignment1/Pages/Charts.razor" />
       </list>
     </option>
   </component>
@@ -172,7 +173,7 @@
       <workItem from="1604498744731" duration="1892000" />
       <workItem from="1604761077755" duration="10151000" />
       <workItem from="1604860814342" duration="15787000" />
-      <workItem from="1604934963366" duration="6086000" />
+      <workItem from="1604934963366" duration="14300000" />
     </task>
     <task id="LOCAL-00001" summary="Unfinished">
       <created>1602191506173</created>
@@ -377,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604938777714</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="minor fix">
+      <created>1604942215617</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1604942215617</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,7 +438,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Basic Working Version" />
     <MESSAGE value="Added Validation" />
     <MESSAGE value="Basic Search Added" />
     <MESSAGE value="Added sorting" />
@@ -455,7 +462,8 @@
     <MESSAGE value="Done" />
     <MESSAGE value="Cleared up code" />
     <MESSAGE value="Added errors in api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added errors in api" />
+    <MESSAGE value="minor fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="960" y="275" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602434233696">
@@ -587,9 +595,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1602167775192" />
-    <state x="602" y="206" key="Vcs.Push.Dialog.v2" timestamp="1604938795804">
-      <screen x="0" y="0" width="2560" height="1080" />
+    <state x="-1559" y="165" key="Vcs.Push.Dialog.v2" timestamp="1604942220106">
+      <screen x="-1920" y="0" width="1536" height="864" />
     </state>
+    <state x="-1559" y="165" key="Vcs.Push.Dialog.v2/-1920.0.1536.864/0.0.2560.1080@-1920.0.1536.864" timestamp="1604942220106" />
     <state x="602" y="206" key="Vcs.Push.Dialog.v2/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604938795804" />
     <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1602191517952" />
     <state x="602" y="206" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1602350779472" />
