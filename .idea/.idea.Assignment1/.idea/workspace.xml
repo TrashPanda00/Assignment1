@@ -9,22 +9,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="864bd38f-554e-4c37-b95a-20e5a31b2f3c" name="Default Changelist" comment="Final">
-      <change afterPath="$PROJECT_DIR$/WebAPI/Assignment4.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Data/CustomDBContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Migrations/20201126145647_InitialCreate.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Migrations/20201126145647_InitialCreate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Migrations/CustomDBContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="864bd38f-554e-4c37-b95a-20e5a31b2f3c" name="Default Changelist" comment="Assignment 4">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assignment1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/Assignment1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment1/Assignment1.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Data/AdultService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Data/AdultService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Data/UserData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Data/UserData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Model/Adult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Model/Adult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Model/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Model/Person.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Model/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Model/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +177,7 @@
       <workItem from="1604860814342" duration="15787000" />
       <workItem from="1604934963366" duration="15060000" />
       <workItem from="1605751955244" duration="3785000" />
-      <workItem from="1606401449117" duration="3700000" />
+      <workItem from="1606401449117" duration="4498000" />
     </task>
     <task id="LOCAL-00001" summary="Unfinished">
       <created>1602191506173</created>
@@ -410,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604968245452</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Assignment 4">
+      <created>1606405412105</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1606405412105</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,7 +456,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Basic Search Added" />
     <MESSAGE value="Added sorting" />
     <MESSAGE value="Delete button and fixed sorting bugs" />
     <MESSAGE value="Radio Buttons" />
@@ -488,7 +480,8 @@
     <MESSAGE value="Added errors in api" />
     <MESSAGE value="minor fix" />
     <MESSAGE value="Final" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final" />
+    <MESSAGE value="Assignment 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assignment 4" />
   </component>
   <component name="WindowStateProjectService">
     <state x="872" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606402860452">
@@ -628,10 +621,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1602167775192" />
-    <state x="-1559" y="165" key="Vcs.Push.Dialog.v2" timestamp="1604968249633">
+    <state x="-1559" y="165" key="Vcs.Push.Dialog.v2" timestamp="1606405417609">
       <screen x="-1920" y="0" width="1536" height="864" />
     </state>
-    <state x="-1559" y="165" key="Vcs.Push.Dialog.v2/-1920.0.1536.864/0.0.2560.1080@-1920.0.1536.864" timestamp="1604968249633" />
+    <state x="-1559" y="165" key="Vcs.Push.Dialog.v2/-1920.0.1536.864/0.0.2560.1080@-1920.0.1536.864" timestamp="1606405417609" />
     <state x="602" y="206" key="Vcs.Push.Dialog.v2/-1920.0.1536.864/0.0.2560.1080@0.0.2560.1080" timestamp="1604938795804" />
     <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1602191517952" />
     <state x="602" y="206" key="Vcs.Push.Dialog.v2/0.0.2560.1080@0.0.2560.1080" timestamp="1602350779472" />
