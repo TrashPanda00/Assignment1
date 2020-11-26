@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using WebAPI.Model;
 
@@ -6,28 +7,30 @@ namespace WebAPI.Data
 {
     public class AdultService : IAdultService
     {
-        private FileContext fileContext;
+        
+        private CustomDBContext DBContext;
 
         public AdultService()
         {
-            fileContext = new FileContext();
+            DBContext = new CustomDBContext();
         }
 
-        public Task<IList<Adult>> getAdult()
+        public async Task<IList<Adult>> getAdult()
         {
-            return Task.FromResult(fileContext.Adults);
+            IList<Adult> adults = DBContext.Adults.ToList();
+            return adults;
         }
 
         public async Task Add(Adult newAdult)
         {
-            fileContext.Adults.Add(newAdult);
-            fileContext.SaveChanges();
+            DBContext.Adults.AddAsync(newAdult);
+            DBContext.SaveChangesAsync();
         }
 
         public async Task Remove(Adult adultToRemove)
         {
-            fileContext.Adults.Remove(adultToRemove);
-            fileContext.SaveChanges();
+            DBContext.Adults.Remove(adultToRemove);
+            DBContext.SaveChangesAsync();
         }
     }
 }

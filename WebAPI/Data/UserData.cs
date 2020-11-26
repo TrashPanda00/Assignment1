@@ -8,25 +8,26 @@ namespace WebAPI.Data
 {
     public class UserData : IUserData
     {
-        private FileContext fileContext;
+        private CustomDBContext DBContext;
 
 
         public UserData()
         {
-            fileContext = new FileContext();
+            DBContext = new CustomDBContext();
         }
         public async Task AddUser(User user)
         {
-            if (fileContext.Users.FirstOrDefault(u => u.Username.Equals(user.Username)) == null)
+            Console.WriteLine(user.Username);
+            if (DBContext.Users.FirstOrDefault(u => u.Username.Equals(user.Username)) == null)
             {
-                fileContext.Users.Add(user);
-                fileContext.SaveChanges();
+                DBContext.Users.AddAsync(user);
+                DBContext.SaveChangesAsync();
             }
         }
 
         public async Task<IList<User>> getUsers()
         {
-            IList<User> users = fileContext.Users;
+            IList<User> users = DBContext.Users.ToList();
             return users;
         }
     }

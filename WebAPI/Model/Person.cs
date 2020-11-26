@@ -7,17 +7,22 @@ using System.Linq;
 namespace WebAPI.Model {
 public class Person {
     
+    [Key]
     public int Id { get; set; }
     [NotNull]
+    [MaxLength(50)]
     [Required(ErrorMessage = "First name is required.")]
     public string FirstName { get; set; }
     [NotNull]
+    [MaxLength(50)]
     [Required(ErrorMessage = "Last name is required.")]
     public string LastName { get; set; }
     [NotNull]
+    [MaxLength(50)]
     [ValidHairColor]
     public string HairColor { get; set; }
     [NotNull]
+    [MaxLength(50)]
     [ValidEyeColor]
     public string EyeColor { get; set; }
     [NotNull, Range(0, 125)]
@@ -27,6 +32,7 @@ public class Person {
     [NotNull, Range(30, 250)]
     public int Height { get; set; }
     [NotNull]
+    [MaxLength(6)]
     [Required(ErrorMessage = "Gender is required.")]
     public string Sex { get; set; }
 

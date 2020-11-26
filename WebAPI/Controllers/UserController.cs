@@ -44,6 +44,7 @@ namespace WebAPI.Controllers
 
             try
             {
+                Console.WriteLine(user.Username);
                 await userData.AddUser(user);
                 return Created($"/{user.Username}", user);
             }
